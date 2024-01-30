@@ -1,0 +1,44 @@
+@import "../../ReponsiveStyles/mobileDesign.scss";
+
+header{
+    @include xs{
+        position: static;
+        ul{
+            display: none;
+            width: 100%;
+            flex-direction: column;
+            height: -100px;
+            transition: all 0.6s ease-in-out;
+        }
+        .themeIcon{
+            display: none;
+        }
+        .menuIcon{
+            display: flex;
+
+        }
+        .headerBtn{
+            display: none;
+        }
+        .active{
+                display: flex;
+                height: fit-content;
+                padding-top: 20px;
+                background: inherit;
+                
+                button{
+                    display: block;
+                }
+                 @at-root header{
+                    height: fit-content;
+                    background: wheat;
+                    align-items: revert;
+                }
+        }
+        
+    }
+}
+
+header .active  header {
+
+}

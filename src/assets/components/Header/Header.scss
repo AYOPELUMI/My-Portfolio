@@ -1,0 +1,29 @@
+header{
+    width: 100%;
+    position: fixed;
+    padding: 12px 20px;
+    background: white;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    top: 0;
+
+    ul{
+        display: flex;
+        list-style-type: none;
+        align-items: center;
+        gap: 20px;
+
+        button{
+            display: none;
+        }
+    }
+
+    .menuIcon{
+        display: none;
+    }
+    button{
+        width: 100px;
+    }
+}

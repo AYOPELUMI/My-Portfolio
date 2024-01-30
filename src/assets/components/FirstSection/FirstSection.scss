@@ -1,0 +1,13 @@
+.firstSection{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 90px;
+
+    .btnCtnr{
+        display: flex;
+        justify-content: start;
+        padding:10px 0px;
+    }
+}
