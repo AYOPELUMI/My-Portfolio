@@ -1,0 +1,32 @@
+@font-face {
+    font-family: 'Lepraqun';
+    line-height: revert;
+    font-weight: 900;
+    src: local('lepraqun'), url(./assets/Fonts/lepraqun-personal-use-cufonfonts/LepraqunPersonalUse-Regular.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Memoirs';
+    line-height: normal;
+    font-weight: 800;
+    src: local('lepraqun'), url(./assets/Fonts/mouse-memoirs-cufonfonts/MouseMemoirs-Regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Salks';
+    font-weight: lighter;
+    src:local('lepraqun'), url(./assets/Fonts/salks-cufonfonts/Salks.otf) format('opentype');
+}
+@font-face {
+    font-family: 'Ralsteda Normal';
+    src: local('lepraqun'), url(./assets/Fonts/ralsteda-cufonfonts/RalstedaRegular-4Bqy9.otf) format('opentype');
+}
+@font-face {
+    font-family: 'Ralsteda Italics';
+    src:local('lepraqun'), url(./assets/Fonts/ralsteda-cufonfonts/RalstedaItalic-mLDZx.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Motisan';
+    src: local('Motisan'),url(./assets/Fonts/motisan-brush-cufonfonts/MotisanBrush2-0W45z.otf)  format('opentype');
+}

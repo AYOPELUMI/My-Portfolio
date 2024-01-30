@@ -3,11 +3,157 @@
     height: 100vh;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    padding: 0px 25px;
     padding-top: 90px;
+    padding-bottom: 60px;
+    background: white;
 
-    .btnCtnr{
+    aside{
         display: flex;
-        justify-content: start;
-        padding:10px 0px;
+        flex-direction: column;
+        gap: 45px;
+        position: relative;
+
+        .introDiv{
+            display: flex;
+            flex-direction: column;
+            gap: 22px;
+            padding-top: 40px;
+
+            h1{
+                font-weight: 800;
+                font-size: 55px;
+                letter-spacing: -0.1px;
+                line-height: 44px;
+                font-family: Salks;
+                margin-bottom: 20px;
+            }
+            h3{
+                font-weight: lighter;
+                font-size: 19px;
+                line-height: 16px;
+                font-family: lepraqun;
+                font-weight: lighter;
+            }
+        }
+        .btnCtnr{
+            width: 100%;
+            display: flex;
+            justify-content: start;
+            padding:10px 0px;
+            position: relative;
+    
+            .chatBtn{
+                width: 100px;
+                padding: 12px 5px;
+                display: flex;
+                gap: 5px;
+                align-items: center;
+                justify-content: center;
+                background: #7C5DFA;
+                color: white;
+            }
+    
+            .chatOptionsCtnr{
+                position: absolute;
+                left: 110px;
+                list-style: none;
+                width: fit-content;
+                height: fit-content;
+                display: flex;
+                flex-direction: column;
+                border: 1px solid #000;
+                z-index: 10;
+                background: white;
+    
+                li{
+                    display: flex;
+                    gap: 10px;
+                    padding: 12px 16px;
+                    align-items: center;
+                    justify-content: space-between;
+                    color: #000;
+    
+                    &:hover{
+                        background: wheat;
+                        color: white;
+                    }
+                }
+            }
+        }
+        .socialLinks{
+            margin-top: auto;
+            display: flex;
+            gap: 20px;
+            align-items: center;
+
+            h4{
+                font-weight: normal;
+                font-size: 24px;
+                font-family: Salks;
+            }
+            .icon{
+                font-size: 18px;
+            }
+
+            .linkedIcon{
+                color: #2885ff;
+                &:hover{
+                    background: #2885ff;
+                    color: white;
+                }
+            }
+            .gitIcon{
+                color: #2e2c2c;
+
+                &:hover{
+                    background: #2e2c2c;
+                    color: white;
+                }
+            }
+
+        }
+
+        .hexagon { 
+            position: absolute; 
+            margin: 0 auto; 
+            background-color: dodgerblue; 
+            border-radius: 14px; 
+            width: 300px;  
+            height: 189px; 
+            box-sizing: border-box; 
+            transition: all 1s; 
+            border: 0.4vh solid transparent; 
+
+            &:before, &:after { 
+                content: ""; 
+                border: inherit; 
+                position: absolute; 
+                top: -0.5vh; 
+                left: -0.5vh; 
+                background-color: dodgerblue; 
+                border-radius: inherit; 
+                height: 100%; 
+                width: 100%; 
+            } 
+
+            &:before { 
+                transform: rotate(60deg); 
+            } 
+            &:after { 
+                transform: rotate(-60deg); 
+            }
+        } 
+      &:nth-child(2n){
+        justify-content: center;
+        align-items: center;
+      }
+        /* Creating pseudo-class */
+ 
+          
+        /* Align them in such a way 
+        that they form a hexagon */
+  
     }
+
 }

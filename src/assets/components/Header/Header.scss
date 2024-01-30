@@ -8,13 +8,23 @@ header{
     align-items: center;
     justify-content: space-between;
     top: 0;
-
+    z-index: 99;
+    .logoCtnr{
+        font-family: Motisan;
+    }
     ul{
         display: flex;
         list-style-type: none;
         align-items: center;
         gap: 20px;
-
+        li{
+            a{
+                color: #000;
+                text-decoration: none;
+                font-family: Salks;
+                font-weight: normal;
+            }
+        }
         button{
             display: none;
         }
@@ -25,5 +35,7 @@ header{
     }
     button{
         width: 100px;
+        background: #7C5DFA;
+        color: white;
     }
 }

@@ -16,7 +16,7 @@ export const Header = () => {
     return (
         <header>
             <div className="logoCtnr">
-            Logo
+            Ayodeji<br />Pelumi
             </div>
             <ul className= {toggleMenu ? "active" : "headerMenuCtnr"}>
             {links.map((value, index) => {
