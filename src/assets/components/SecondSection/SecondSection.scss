@@ -25,4 +25,77 @@
             font-weight: bold;
         }
     }
+    $width: 100%;
+    .cardCtnr{
+        width: $width;
+        display: inline-block;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+        @mixin animate($animation-name, $animation-duration, $animation-direction, $animation-iteration-count){
+            animation : $animation-name $animation-duration $animation-direction $animation-iteration-count;
+        }
+
+        @mixin keyframes($name){
+            @keyframes #{$name}{
+                @content;		
+            }
+        }
+
+        div{
+            &:first-child{
+            margin-right: calc($width / 4);
+            margin-left: calc($width /4);
+            grid-column-start: 1;
+            grid-column-end: 3;
+
+            @include animate(animateDisplay, 3s, linear, infinite);
+
+            @include keyframes(animateDisplay) {
+                0% {
+                  transform: translate(0,0);
+                  opacity: 1;
+                }
+                100% {
+                  transform: translate(30px,30px);
+                  opacity: 0;
+                }
+              }
+            }
+            &:nth-child(2n){
+                @include animate(animateY, 3s, linear, infinite);
+
+                @include keyframes(animateY) {
+                    0% {
+                      transform: translateY(0px);
+                      opacity: 1;
+                    }
+                    100% {
+                      transform: translateY(-50px);
+                      opacity: 0;
+                    }
+                  }
+            }
+
+            &:nth-child(3n){
+                @include animate(animateX, 3s, linear, infinite);
+
+                @include keyframes(animateX) {
+                    0% {
+                      transform: translateX(0);
+                      opacity: 1;
+                    }
+                    100% {
+                      transform: translateX(-50px);
+                      opacity: 0;
+                    }
+                  }
+            }
+        }
+        .card{
+            height: 200px;
+            border-radius: 12px;
+            border: 3px solid #000;
+
+        }
+    }
 }
