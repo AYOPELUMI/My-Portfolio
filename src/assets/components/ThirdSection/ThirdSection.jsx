@@ -6,7 +6,7 @@ export const ThirdSection = () => {
     const[showMore, setShowMore] = useState(false)
     console.log({showMore})
   return (
-    <section>
+    <section className='thirdSection'>
         <div className='cardCtnr'>
             <h4 className="heading">
                 Recent Projects

@@ -1,6 +1,6 @@
 @import "../../ReponsiveStyles/mobileDesign.scss";
 
-section{
+.thirdSection{
     @include xs{
         min-height: 600px;
         max-height: 85vh;
