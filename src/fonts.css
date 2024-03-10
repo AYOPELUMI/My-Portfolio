@@ -30,3 +30,13 @@
     font-family: 'Motisan';
     src: local('Motisan'),url(./assets/Fonts/motisan-brush-cufonfonts/MotisanBrush2-0W45z.otf)  format('opentype');
 }
+
+@font-face {
+    font-family: 'Futura';
+    src: local('Motisan'),url(./assets/Fonts/futura-lt-cufonfonts/FuturaLT.ttf)  format('truetype');
+}
+
+@font-face {
+    font-family: 'Futura Bold';
+    src: local('Motisan'),url(./assets/Fonts/futura-lt-cufonfonts/FuturaLT-CondensedBold.ttf)  format('truetype');
+}

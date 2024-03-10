@@ -1,15 +1,17 @@
 .secondSection{
     width: 100vw;
     height: 100vh;
-    background: #f2f2f2;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding-top: 105px;
+    background:#f2f2f2;
+    display: flex;
+    padding: 0px 45px;
+    padding-top: 55px;
 
-    .skllsHeading{
-        width: 100%;
-        height: 100%;
-        padding-top: 50px;
+    .serviceHeading{
+        width: 50%;
+        height: fit-content;
+        padding-top: 70px;
+        text-align: center;
+
         h1{
             font-weight: 800;
             font-size: 55px;
@@ -25,76 +27,21 @@
             font-weight: bold;
         }
     }
-    $width: 100%;
-    .cardCtnr{
-        width: $width;
-        display: inline-block;
-        grid-template-columns: 1fr 1fr;
-        gap: 50px;
-        @mixin animate($animation-name, $animation-duration, $animation-direction, $animation-iteration-count){
-            animation : $animation-name $animation-duration $animation-direction $animation-iteration-count;
-        }
+    .list{
+        width: 50%;
+        height: 100%;
+        list-style: none;
+        padding-top: 50px;
+        
 
-        @mixin keyframes($name){
-            @keyframes #{$name}{
-                @content;		
-            }
-        }
-
-        div{
-            &:first-child{
-            margin-right: calc($width / 4);
-            margin-left: calc($width /4);
-            grid-column-start: 1;
-            grid-column-end: 3;
-
-            @include animate(animateDisplay, 3s, linear, infinite);
-
-            @include keyframes(animateDisplay) {
-                0% {
-                  transform: translate(0,0);
-                  opacity: 1;
-                }
-                100% {
-                  transform: translate(30px,30px);
-                  opacity: 0;
-                }
-              }
-            }
-            &:nth-child(2n){
-                @include animate(animateY, 3s, linear, infinite);
-
-                @include keyframes(animateY) {
-                    0% {
-                      transform: translateY(0px);
-                      opacity: 1;
-                    }
-                    100% {
-                      transform: translateY(-50px);
-                      opacity: 0;
-                    }
-                  }
-            }
-
-            &:nth-child(3n){
-                @include animate(animateX, 3s, linear, infinite);
-
-                @include keyframes(animateX) {
-                    0% {
-                      transform: translateX(0);
-                      opacity: 1;
-                    }
-                    100% {
-                      transform: translateX(-50px);
-                      opacity: 0;
-                    }
-                  }
-            }
-        }
-        .card{
-            height: 200px;
-            border-radius: 12px;
-            border: 3px solid #000;
+        li{
+            margin: 20px 5px;
+            padding: 15px 10px;
+            font-family: Futura Bold;
+            font-size: 28px;
+            letter-spacing: normal;
+            border-top: 3px solid #000;
+            font-weight: 900;
 
         }
     }

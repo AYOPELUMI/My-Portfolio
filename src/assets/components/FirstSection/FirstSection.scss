@@ -1,9 +1,9 @@
 .firstSection{
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 0px 25px;
+    padding: 0px 55px;
     padding-top: 90px;
     padding-bottom: 60px;
     background: white;
@@ -18,7 +18,7 @@
             display: flex;
             flex-direction: column;
             gap: 22px;
-            padding-top: 40px;
+            padding-top: 80px;
 
             h1{
                 font-weight: 800;
@@ -29,60 +29,12 @@
                 margin-bottom: 20px;
             }
             h3{
-                font-weight: lighter;
                 font-size: 19px;
                 line-height: 16px;
                 font-family: lepraqun;
-                font-weight: lighter;
-            }
-        }
-        .btnCtnr{
-            width: 100%;
-            display: flex;
-            justify-content: start;
-            padding:10px 0px;
-            position: relative;
-    
-            .chatBtn{
-                width: 100px;
-                padding: 12px 5px;
-                display: flex;
-                gap: 5px;
-                align-items: center;
-                justify-content: center;
-                background: #7C5DFA;
-                color: white;
-            }
-    
-            .chatOptionsCtnr{
-                position: absolute;
-                left: 110px;
-                list-style: none;
-                width: fit-content;
-                height: fit-content;
-                display: flex;
-                flex-direction: column;
-                border: 1px solid #000;
-                z-index: 10;
-                background: white;
-    
-                li{
-                    display: flex;
-                    gap: 10px;
-                    padding: 12px 16px;
-                    align-items: center;
-                    justify-content: space-between;
-                    color: #000;
-    
-                    &:hover{
-                        background: wheat;
-                        color: white;
-                    }
-                }
             }
         }
         .socialLinks{
-            margin-top: auto;
             display: flex;
             gap: 20px;
             align-items: center;

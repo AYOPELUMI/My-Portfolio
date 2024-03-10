@@ -1,0 +1,7 @@
+@import"../../ReponsiveStyles/mobileDesign.scss";
+
+.fourthSection{
+    @include xs{
+        flex-direction: column;
+    }
+}

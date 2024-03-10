@@ -1,0 +1,18 @@
+@import "../../ReponsiveStyles/mobileDesign.scss";
+.firstSection{
+    @include xs{
+        grid-template-columns: 1fr;
+        padding-top: 0px;
+        min-height: fit-content;
+        max-height: 100vh;
+        aside{
+            width: 100%;
+            .introDiv{
+                width: 100%;
+            }
+            &:nth-child(2){
+                display: none;
+            }
+        }
+    }
+}

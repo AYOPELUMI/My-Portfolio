@@ -9,7 +9,8 @@ header{
     justify-content: space-between;
     top: 0;
     z-index: 99;
-    .logoCtnr{
+    border-bottom: 1px solid #000;
+    .logo{
         font-family: Motisan;
     }
     ul{
@@ -18,6 +19,32 @@ header{
         align-items: center;
         gap: 20px;
         li{
+            position: relative;
+            cursor: pointer;
+
+            &:hover{
+                a{
+                    color: #535bf2;
+                }
+                &::before{
+                    left: 0px;
+                    right: 0px;
+                    background: #535bf2;
+                }
+            }
+            &::before{
+                content: "";
+                position: absolute;
+                z-index: -1;
+                left: 51%;
+                right: 51%;
+                bottom: 1.5px;
+                background: black;
+                height: 1px;
+                transition-property: left, right;
+                transition-duration: 0.3s;
+                transition-timing-function: ease-out;
+            }
             a{
                 color: #000;
                 text-decoration: none;
@@ -29,7 +56,11 @@ header{
             display: none;
         }
     }
-
+    div{
+        display: flex;
+        gap: 14px;
+        align-items: center;
+    }
     .menuIcon{
         display: none;
     }
@@ -37,5 +68,8 @@ header{
         width: 100px;
         background: #7C5DFA;
         color: white;
+    }
+    .themeIcon{
+        cursor: pointer;
     }
 }
