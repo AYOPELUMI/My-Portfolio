@@ -4,10 +4,15 @@ import "./Reponsive.scss"
 
 export const ThirdSection = () => {
     const[showMore, setShowMore] = useState(false)
+
+
+    const handleToggle =() => {
+         setShowMore(!showMore)
+    }
     console.log({showMore})
   return (
-    <section className='thirdSection'>
-        <div className='cardCtnr'>
+    <section className={showMore? 'thirdSection active' :'thirdSection'}>
+        <div className="cardCtnr">
             <h4 className="heading">
                 Recent Projects
             </h4>
@@ -47,7 +52,7 @@ export const ThirdSection = () => {
                     <a href="https://ayopelumi-multistepform.netlify.app/" target='_blank'>Check it out</a>
                 </div>
             </div>
-            <div className='card card2'>
+            <div className='card'>
                 <div className="cardBg"></div>
                 <img alt='Invoice app'/>
                 <div className='front'>
@@ -56,7 +61,7 @@ export const ThirdSection = () => {
                     <a href="https://ayopelumi-invoiceapp.netlify.app/" target="_blank"> Check it out</a>
                 </div>
             </div>
-            <div className='card card3'>
+            <div className='card'>
                 <div className="cardBg"></div>
                 <img  alt='Link sharing app'/>
                 <div className='front'>
@@ -65,9 +70,18 @@ export const ThirdSection = () => {
                     <a href="https://ayopelumi-linksharingapp.netlify.app/" target='_blank'>Check it out</a>
                 </div>
             </div>
+            <div className='card'>
+                <div className="cardBg"></div>
+                <img  alt='Yime Counter'/>
+                <div className='front'>
+                    <h4>Time Counter</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt a excepturi nesciunt modi quidem porro deleniti veniam ea inventore corrupti illum, alias eum laborum nihil nisi. Necessitatibus hic distinctio cumque.</p>
+                    <a href="https://ayopelumi-timecounter.netlify.app/" target='_blank'>Check it out</a>
+                </div>
+            </div>
         </div>
         <div className='reponsiveFooter'>
-            <p className={showMore ? "active" : "nothing" } onClick={() => setShowMore(!showMore)}>Click for more</p>
+            <p onClick={handleToggle}>Click {showMore ? "for less" : "for more"}</p>
         </div>
     </section>
   )

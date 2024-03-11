@@ -1,0 +1,17 @@
+@import "../../ReponsiveStyles/mobileDesign.scss";
+.secondSection{
+    @include xs{
+         flex-direction: column;
+         height: fit-content;
+         padding-top: 0;
+         padding-bottom: 60px;
+
+         .serviceHeading{
+            width: 100%;
+            padding-top: 20px;
+         }
+         .list{
+            width: 100%;
+         }
+    }
+}

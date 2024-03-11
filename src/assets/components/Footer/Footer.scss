@@ -1,12 +1,13 @@
 .footer{
     width: 100vw;
+    min-height: fit-content;
     max-height: 100vh;
     position: relative;
     background:#6e07f3;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 80px;
+    padding: 80px 45px;
     color: white;
 
     .topContent{
@@ -32,6 +33,7 @@
             flex: 1;
             text-wrap: wrap;
             text-align: center;
+            margin: 0px 15px;
         }
         .btnCtnr{
             flex: 1;
@@ -39,6 +41,7 @@
             justify-content: center;
             padding:10px 0px;
             position: relative;
+            margin: 0px 15px;
     
             .chatBtn{
                 width: fit-content;

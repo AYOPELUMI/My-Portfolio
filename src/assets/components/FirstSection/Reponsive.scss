@@ -2,7 +2,6 @@
 .firstSection{
     @include xs{
         grid-template-columns: 1fr;
-        padding-top: 0px;
         min-height: fit-content;
         max-height: 100vh;
         aside{

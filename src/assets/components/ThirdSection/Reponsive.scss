@@ -8,7 +8,6 @@
         flex-direction: column;
         align-items: center;
         .cardCtnr{
-
             .heading{
                 width: 100%;
             }
@@ -17,6 +16,7 @@
                 flex-basis: content;
             }
         }
+
         .reponsiveFooter{
             width: 100%;
             display: flex;
@@ -29,13 +29,23 @@
             cursor: pointer;
             z-index: 20;
             background: white;
-
-            .active{
-                color: blue;
-                @at-root section{
-                    max-height: fit-content;
-                }
+            p{
+                display: block;
+                text-decoration: underline;
+                color: dodgerblue;
             }
         }
     }
+    @include sm{
+        .cardCtnr{
+            .card{
+                flex-basis: calc(50% - 30px);
+            }
+        }
+    }
+}
+.active{
+    color: blue;
+        max-height: fit-content;
+        padding-bottom: 30px;
 }

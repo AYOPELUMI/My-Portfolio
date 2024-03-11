@@ -1,5 +1,6 @@
 import React from 'react'
 import "./SecondSection.scss"
+import "./Responsive.scss"
 
 export const SecondSection = () => {
 

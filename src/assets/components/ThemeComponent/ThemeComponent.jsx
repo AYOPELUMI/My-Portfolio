@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import {ThemeContext, themes} from "../../ThemeContext.js"
-import {RiMoonFill,RiSunFill} from "react-icons/ri"
+import { BsCircleHalf } from "react-icons/bs";
 
 export const ThemeComponent = () => {
     const [darkMode, setDarkMode] = useState(true)
@@ -11,7 +11,7 @@ export const ThemeComponent = () => {
                 setDarkMode(!darkMode)
                 changeTheme(darkMode ? themes.light : themes.dark)
             }}
-            >{darkMode ? <RiSunFill className="themeIcon"> </RiSunFill> : <RiMoonFill className="themeIcon"></RiMoonFill>}
+            ><BsCircleHalf className="themeIcon" />
         </i>
         )}
     </ThemeContext.Consumer> 

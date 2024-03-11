@@ -1,0 +1,10 @@
+@import "../../ReponsiveStyles/mobileDesign.scss";
+
+.footer{
+    @include xs{
+        padding-top: 160px;
+        .topContent{
+            flex-direction: column;
+        }
+    }
+}

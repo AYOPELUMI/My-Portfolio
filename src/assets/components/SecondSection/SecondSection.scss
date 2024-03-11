@@ -1,9 +1,10 @@
 .secondSection{
     width: 100vw;
-    height: 100vh;
+    min-height: fit-content;
+    max-height: 100vh;
     background:#f2f2f2;
     display: flex;
-    padding: 0px 45px;
+    padding: 150px 45px;
     padding-top: 55px;
 
     .serviceHeading{

@@ -5,6 +5,7 @@ import {FaTelegramPlane} from "react-icons/fa"
 import {TiLocationArrowOutline} from "react-icons/ti"
 import { Button } from '../Button/Button'
 import "./Footer.scss"
+import "./Responsive.scss"
 export const Footer = () => {
     const [chatOptions, setChatOptions] = useState(false)
     const chatLinks =[
@@ -57,4 +58,3 @@ export const Footer = () => {
     </div>
   )
 }
-
