@@ -14,6 +14,7 @@ header{
         font-family: Motisan;
         text-wrap: wrap;
         height: fit-content;
+        color: #666;
     }
     ul{
         display: flex;
@@ -66,6 +67,7 @@ header{
     }
     .menuIcon{
         display: none;
+        color: #666;
     }
     button{
         width: 100px;
@@ -74,5 +76,6 @@ header{
     }
     .themeIcon{
         cursor: pointer;
+        color:#666;
     }
 }

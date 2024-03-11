@@ -17,7 +17,7 @@
         .introDiv{
             display: flex;
             flex-direction: column;
-            gap: 22px;
+            justify-content: center;
             padding-top: 80px;
 
             h1{
@@ -27,11 +27,13 @@
                 line-height: 44px;
                 font-family: Salks;
                 margin-bottom: 20px;
+                color: #666;
             }
             h3{
                 font-size: 19px;
                 line-height: 16px;
                 font-family: lepraqun;
+                color: #666;
             }
         }
         .socialLinks{
@@ -43,6 +45,7 @@
                 font-weight: normal;
                 font-size: 24px;
                 font-family: Salks;
+                color: #666;
             }
             .icon{
                 font-size: 18px;
