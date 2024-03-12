@@ -21,9 +21,12 @@ header{
         .themeIcon{
             display: none;
         }
+        .logo{
+            color: white;
+        }
         .menuIcon{
             display: flex;
-
+            color: white;
         }
         .headerBtn{
             display: none;
@@ -41,7 +44,7 @@ header{
                 }
                  @at-root header{
                     height: fit-content;
-                    background: wheat;
+                    background: #6e07f3;
                     align-items: revert;
                 }
         }   
