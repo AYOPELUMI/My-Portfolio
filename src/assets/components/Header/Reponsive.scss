@@ -3,6 +3,8 @@
 header{
     @include xs{
         position: static;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         div{
             padding: 10px;
         }
@@ -11,6 +13,10 @@ header{
             flex-direction: column;
             display: none;
             transition: all 0.6s ease-in-out;
+        }
+        .menuDiv{
+            justify-self: end;
+            font-weight: bolder;
         }
         .themeIcon{
             display: none;
@@ -27,7 +33,9 @@ header{
                 height: fit-content;
                 padding-top: 20px;
                 background: inherit;
-                
+                grid-row-start: 2;
+                grid-column-start: 1;
+                grid-column-end: -1;
                 button{
                     display: block;
                 }
@@ -35,10 +43,6 @@ header{
                     height: fit-content;
                     background: wheat;
                     align-items: revert;
-
-                    div{
-                        align-items: revert;
-                    }
                 }
         }   
     }

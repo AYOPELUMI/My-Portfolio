@@ -72,7 +72,7 @@ export const ThirdSection = () => {
             </div>
             <div className='card'>
                 <div className="cardBg"></div>
-                <img  alt='Yime Counter'/>
+                <img  alt='Time Counter'/>
                 <div className='front'>
                     <h4>Time Counter</h4>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt a excepturi nesciunt modi quidem porro deleniti veniam ea inventore corrupti illum, alias eum laborum nihil nisi. Necessitatibus hic distinctio cumque.</p>

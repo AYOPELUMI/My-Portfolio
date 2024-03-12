@@ -4,10 +4,17 @@
         grid-template-columns: 1fr;
         min-height: fit-content;
         max-height: 100vh;
+        padding-top: 0;
         aside{
             width: 100%;
             .introDiv{
                 width: 100%;
+                padding-top: 40px;
+
+                h3{
+                    text-align: center;
+                    margin-top: 20px;
+                }
             }
             &:nth-child(2){
                 display: none;

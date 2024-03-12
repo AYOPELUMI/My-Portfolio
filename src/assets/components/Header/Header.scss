@@ -10,11 +10,13 @@ header{
     top: 0;
     z-index: 99;
     border-bottom: 1px solid #000;
+    transition: all 0.6s ease;
     .logo{
         font-family: Motisan;
         text-wrap: wrap;
         height: fit-content;
         color: #666;
+        font-weight: bolder;
     }
     ul{
         display: flex;
@@ -59,7 +61,7 @@ header{
             display: none;
         }
     }
-    div{
+    .menuDiv{
         display: flex;
         gap: 14px;
         align-items: center;

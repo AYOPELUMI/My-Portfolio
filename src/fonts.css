@@ -9,21 +9,21 @@
     font-family: 'Memoirs';
     line-height: normal;
     font-weight: 800;
-    src: local('lepraqun'), url(./assets/Fonts/mouse-memoirs-cufonfonts/MouseMemoirs-Regular.ttf) format('truetype');
+    src: local('Memoirs'), url(./assets/Fonts/mouse-memoirs-cufonfonts/MouseMemoirs-Regular.ttf) format('truetype');
 }
 
 @font-face {
     font-family: 'Salks';
     font-weight: lighter;
-    src:local('lepraqun'), url(./assets/Fonts/salks-cufonfonts/Salks.otf) format('opentype');
+    src:local('Salks'), url(./assets/Fonts/salks-cufonfonts/Salks.otf) format('opentype');
 }
 @font-face {
     font-family: 'Ralsteda Normal';
-    src: local('lepraqun'), url(./assets/Fonts/ralsteda-cufonfonts/RalstedaRegular-4Bqy9.otf) format('opentype');
+    src: local('Ralsteda'), url(./assets/Fonts/ralsteda-cufonfonts/RalstedaRegular-4Bqy9.otf) format('opentype');
 }
 @font-face {
     font-family: 'Ralsteda Italics';
-    src:local('lepraqun'), url(./assets/Fonts/ralsteda-cufonfonts/RalstedaItalic-mLDZx.otf) format('opentype');
+    src:local('Ralsteda'), url(./assets/Fonts/ralsteda-cufonfonts/RalstedaItalic-mLDZx.otf) format('opentype');
 }
 
 @font-face {
@@ -38,5 +38,9 @@
 
 @font-face {
     font-family: 'Futura Bold';
-    src: local('Motisan'),url(./assets/Fonts/futura-lt-cufonfonts/FuturaLT-CondensedBold.ttf)  format('truetype');
+    src: local('Futura'),url(./assets/Fonts/futura-lt-cufonfonts/FuturaLT-CondensedBold.ttf)  format('truetype');
+}
+@font-face{
+    font-family : 'Smeltex';
+    src: local('Smeltex'),url(./assets/Fonts/smeltex-cufonfonts/Smeltex-Medium.otf) format('opentype');
 }

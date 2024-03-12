@@ -27,7 +27,7 @@ export const Header = () => {
                 </li>
             })}
             </ul>
-            <div>
+            <div className='menuDiv'>
                 <ThemeComponent />
                 <IoMdMenu  className= "menuIcon" onClick={handleToggle}/>
                 <Button displayWord="Hire Me" className="headerBtn"/>            
