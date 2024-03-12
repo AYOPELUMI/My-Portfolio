@@ -33,6 +33,25 @@ header{
         .headerBtn{
             display: none;
         }
+        ul{
+            li{
+                &:hover{
+                    a{
+                        color: white;
+                    }
+                    &::before{
+                        background: white;
+                    }
+                }
+                &::before{
+                    z-index: 10;
+                    background: white;
+                }
+                a{
+                    color: white;
+                }
+            }
+        }
         .active{
                 display: flex;
                 height: fit-content;
@@ -44,10 +63,10 @@ header{
                 button{
                     display: block;
                 }
+
                  @at-root header{
                     height: fit-content;
                     background: #6e07f3;
-                    align-items: revert;
                 }
         }   
     }
