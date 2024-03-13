@@ -18,4 +18,11 @@
             }
         }
     }
+    @include sm{
+        .topHeading{
+            p{
+                text-align: left;
+            }
+        }
+    }
 }

@@ -6,7 +6,7 @@
     padding: 0px 55px;
     padding-top: 90px;
     padding-bottom: 60px;
-    background: white;
+    background: var(--white-bg);
 
     aside{
         display: flex;
@@ -27,13 +27,13 @@
                 line-height: 44px;
                 font-family: Salks;
                 margin-bottom: 20px;
-                color: #666;
+                color: var(--font-color);
             }
             h3{
                 font-size: 19px;
                 line-height: 23px;
                 font-family: Smeltex;
-                color: #666;
+                color: var(--font-color);
             }
         }
         .socialLinks{
@@ -45,25 +45,23 @@
                 font-weight: normal;
                 font-size: 24px;
                 font-family: Salks;
-                color: #666;
+                color: var(--font-color);
             }
             .icon{
-                font-size: 18px;
+                font-size: 24px;
             }
 
             .linkedIcon{
-                color: #2885ff;
+                color:var(--icon-linkedin);
                 &:hover{
-                    background: #2885ff;
-                    color: white;
+                    color: var(--icon-hover);
                 }
             }
             .gitIcon{
-                color: #2e2c2c;
+                color: var(--icon-github);
 
                 &:hover{
-                    background: #2e2c2c;
-                    color: white;
+                    color: var(--icon-hover);
                 }
             }
 

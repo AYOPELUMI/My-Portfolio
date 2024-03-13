@@ -1,7 +1,7 @@
 .thirdSection{
     width: 100vw;
-    max-height: 100vh;
-    background: white;
+    min-height: fit-content;
+    background: var(--white-bg);
     display: flex;
     flex-direction: column;
     padding: 0px 45px;
@@ -88,16 +88,14 @@
     .card{
         flex-basis: calc(33% - 30px);
         height: 320px;
-        border-radius: 12px;
-        font-family: Memoirs;
+        border-radius: 28px;
         padding: 0px 15px;
         display: flex;
         flex-direction: column;
         position: relative;
-        background: ghostwhite;
+        background: var(--card-bg);
         overflow: hidden;
-        color: black;
-        padding-bottom: 90px;
+        color: var(--font-color);
         margin: 0 15px 30px;
         box-shadow: 10px 10px 6px rgba(0, 0, 0, 0.2);
         transition: all 0.1s ease;
@@ -127,7 +125,7 @@
         &:hover{
             color: white;
             .front{
-                top: 43%;
+                top: 30%;
             }
             .cardBg{
                 transform: scale(10);
@@ -136,9 +134,11 @@
         .front{
             position: relative;
             background:transparent;
-            top: 110%;
+            top: 80%;
             padding-bottom: 30px;
             transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
         }
         .cardBg{
             height: 400px;
@@ -161,19 +161,21 @@
             letter-spacing: 1px;
             position: relative;
             z-index: 2;
-            margin-bottom: 35px;
+            margin-bottom: 40px;
         }
         p{
-            text-align: justify;
+            font-family: Futura;
             position: relative;
             letter-spacing: 1px;
-            font-size: 14px;
-            line-height: 13px;
+            font-size: 15px;
+            line-height: 18px;
             z-index: 2;
             margin-bottom: 20px;
+            flex: 1;
         }
         a{
             font-size: 16px;
+            font-weight: 900;
             text-decoration: underline;
             position: relative;
             z-index: 2;

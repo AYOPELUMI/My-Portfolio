@@ -33,7 +33,7 @@
 
 @font-face {
     font-family: 'Futura';
-    src: local('Motisan'),url(./assets/Fonts/futura-lt-cufonfonts/FuturaLT.ttf)  format('truetype');
+    src: local('Futura'),url(./assets/Fonts/futura-lt-cufonfonts/FuturaLT.ttf)  format('truetype');
 }
 
 @font-face {

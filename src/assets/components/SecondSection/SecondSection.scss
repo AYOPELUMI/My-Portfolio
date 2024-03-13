@@ -2,10 +2,10 @@
     width: 100vw;
     min-height: fit-content;
     max-height: 100vh;
-    background:#f2f2f2;
+    background:var(--whitesmoke-bg);
     display: flex;
-    padding: 150px 45px;
-    padding-top: 55px;
+    padding: 190px 45px;
+    padding-top: 65px;
 
     .serviceHeading{
         width: 50%;
@@ -26,7 +26,7 @@
             font-family: Smeltex;
             font-size: 16px;
             line-height: 18px;
-            color: #22313f;
+            color: var(--special-font);
             font-weight: bold;
         }
     }
@@ -43,9 +43,9 @@
             font-family: Futura Bold;
             font-size: 28px;
             letter-spacing: normal;
-            border-top: 3px solid #000;
+            border-top: 3px solid var(--border-black);
             font-weight: 900;
-            color: #666;
+            color: var(--font-color);
             text-wrap: nowrap;
 
         }

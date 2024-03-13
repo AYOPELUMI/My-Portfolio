@@ -2,21 +2,23 @@ header{
     width: 100%;
     position: fixed;
     padding: 12px 20px;
-    background: white;
+    background: var(--white-bg);
     height: 70px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     top: 0;
     z-index: 99;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid var(--font-black);
     transition: all 0.6s ease;
+
     .logo{
         font-family: Motisan;
         text-wrap: wrap;
         height: fit-content;
-        color: #666;
-        font-weight: bolder;
+        color: var(--font-color);
+        line-height: 1;
+        font-size: 24px;
     }
     ul{
         display: flex;
@@ -26,15 +28,16 @@ header{
         li{
             position: relative;
             cursor: pointer;
+            text-wrap: nowrap;
 
             &:hover{
                 a{
-                    color: #535bf2;
+                    color: var(--font-hover);
                 }
                 &::before{
                     left: 0px;
                     right: 0px;
-                    background: #535bf2;
+                    background: var(--font-hover);
                 }
             }
             &::before{
@@ -43,15 +46,15 @@ header{
                 z-index: -1;
                 left: 51%;
                 right: 51%;
-                bottom: 1.5px;
-                background: black;
+                bottom: 0px;
+                background: var(--font-black);
                 height: 1px;
                 transition-property: left, right;
                 transition-duration: 0.3s;
                 transition-timing-function: ease-out;
             }
             a{
-                color: #000;
+                color: var(--font-black);
                 text-decoration: none;
                 font-family: Salks;
                 font-weight: normal;
@@ -69,7 +72,7 @@ header{
     }
     .menuIcon{
         display: none;
-        color: #666;
+        color: var(--font-color);
     }
     button{
         width: 100px;
@@ -78,6 +81,6 @@ header{
     }
     .themeIcon{
         cursor: pointer;
-        color:#666;
+        color:var(--theme-icon);
     }
 }

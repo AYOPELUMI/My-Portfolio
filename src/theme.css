@@ -1,0 +1,28 @@
+:root{
+    --font-color: #666;
+    --font-black:#000;
+    --white-bg:white;
+    --whitesmoke-bg:#f2f2f2;
+    --card-bg:ghostwhite;
+    --special-font:#22313f;
+    --border-black:#000;
+    --icon-hover:#666;
+    --icon-github:#2e2c2c;
+    --icon-linkedin:#2885ff;
+    --theme-icon:#121212;
+    --default-white:white;
+    --font-hover:#535bf2;
+}
+
+[data-theme = 'dark']{
+    --font-color : white;
+    --font-black:white;
+    --white-bg: #0d192b;
+    --icon-hover:white;
+    --card-bg:#14253d;
+    --whitesmoke-bg: #002245;
+    --special-font:white;
+    --border-black:white;
+    --theme-icon:white;
+    --font-hover:var(--font-black);
+}

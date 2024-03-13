@@ -7,6 +7,7 @@ import { SecondSection } from './assets/components/SecondSection/SecondSection'
 import { ThirdSection } from './assets/components/ThirdSection/ThirdSection'
 import './App.css'
 import "./fonts.css"
+import "./theme.css"
 import { FourthSection } from './assets/components/FourthSection/FourthSection'
 import { Footer } from './assets/components/Footer/Footer'
 
