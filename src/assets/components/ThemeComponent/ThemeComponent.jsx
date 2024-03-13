@@ -7,11 +7,10 @@ export const ThemeComponent = () => {
     return (
         <ThemeContext.Consumer>
         {({changeTheme}) =>(
-            <i onClick={() => {
+            <i><BsCircleHalf className="themeIcon" onClick={() => {
                 setDarkMode(!darkMode)
-                changeTheme(darkMode ? themes.light : themes.dark)
-            }}
-            ><BsCircleHalf className="themeIcon" />
+                changeTheme(!darkMode ? themes.light : themes.dark)
+            }}/>
         </i>
         )}
     </ThemeContext.Consumer> 
