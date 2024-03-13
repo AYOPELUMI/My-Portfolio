@@ -3,7 +3,7 @@
 .thirdSection{
     @include xs{
         min-height: 600px;
-        max-height: 882px;
+        max-height: 1015px;
         overflow: hidden;
         flex-direction: column;
         align-items: center;
@@ -19,8 +19,9 @@
                 padding-bottom: 80px;
 
                 .front{
-                    top: 40%;
+                    top: 30%;
                     color: white;
+                    padding-bottom: 50px;
                 }
 
                 .cardBg{

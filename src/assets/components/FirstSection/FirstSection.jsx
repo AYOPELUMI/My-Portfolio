@@ -16,7 +16,7 @@ export const FirstSection = () => {
                         We execute ideas
                     </h1>
                     <h3>
-                        Hi, i am an front end developer, creating good UI/UX experience, versatile codes
+                        Hi, i am a front end developer, creating good UI/UX experience, versatile codes
                     </h3>
                 </div>
 
