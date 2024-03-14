@@ -41,13 +41,14 @@
             position: absolute;
             bottom: 0;
             left: 0;
-            cursor: pointer;
             z-index: 20;
             background: inherit;
             p{
+                cursor: pointer;
                 display: block;
                 text-decoration: underline;
                 color: dodgerblue;
+                width: fit-content;
             }
         }
     }
@@ -63,9 +64,9 @@
             }
         }
     }
-    .active{
-        color: blue;
-            max-height: fit-content;
-            padding-bottom: 30px;
-    }
+}
+.active{
+    color: blue;
+    max-height: fit-content;
+    padding-bottom: 30px;
 }
