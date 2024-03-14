@@ -2,6 +2,8 @@
 
 .fourthSection{
     @include xs{
+        padding-left: 30px;
+        padding-right: 30px;
         flex-direction: column;
         aside{
             &:nth-child(2){
@@ -19,10 +21,15 @@
         }
     }
     @include sm{
+        padding-left: 20px;
+        padding-right: 20px;
         .topHeading{
             p{
                 text-align: left;
             }
+        }
+        .heading{
+            padding: 0px 10px;
         }
     }
 }

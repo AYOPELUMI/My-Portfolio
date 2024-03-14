@@ -13,7 +13,8 @@ header{
     transition: all 0.6s ease;
 
     .logo{
-        font-family: Motisan;
+        font-family: Apple Crush;
+        letter-spacing: 1.5px;
         text-wrap: wrap;
         height: fit-content;
         color: var(--font-color);
@@ -29,6 +30,7 @@ header{
             position: relative;
             cursor: pointer;
             text-wrap: nowrap;
+            font-size: 20px;
 
             &:hover{
                 a{
@@ -60,8 +62,11 @@ header{
                 font-weight: normal;
             }
         }
-        button{
+        .mobile{
             display: none;
+            &:hover{
+                opacity: 0.8;
+            }
         }
     }
     .menuDiv{
@@ -73,14 +78,25 @@ header{
     .menuIcon{
         display: none;
         color: var(--font-color);
+        font-size: 38px;
+
     }
-    button{
+    .headerBtn{
         width: 100px;
         background: #7C5DFA;
         color: white;
+        text-decoration: none;
+        padding: 6px 20px;
+        border-radius: 12px;
+
+        &:hover{
+            opacity: 0.8;
+        }
     }
     .themeIcon{
         cursor: pointer;
         color:var(--theme-icon);
+        font-size: 24px;
+        margin-top: 6px;
     }
 }

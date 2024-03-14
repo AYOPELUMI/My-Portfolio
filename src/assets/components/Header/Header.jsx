@@ -1,13 +1,12 @@
-import React, {useState}from 'react'
+import {useState}from 'react'
 import { ThemeComponent } from '../ThemeComponent/ThemeComponent'
-import {Button} from "../Button/Button"
 import {IoMdMenu} from "react-icons/io"
 import "./Header.scss"
 import "./Reponsive.scss"
 
 export const Header = () => {
     const [toggleMenu, setToggleMenu] = useState(false)
-    const links =["About Me","Recent Projects","Services","Skills",<Button displayWord="Hire Me"  key="btn"className="headerBtn"/>]
+    const links =["About Me","Skills","Recent Projects","Services"]
 
     const handleToggle = () =>{
         setToggleMenu(!toggleMenu)
@@ -21,16 +20,18 @@ export const Header = () => {
             <ul className= {toggleMenu ? "active" : undefined}>
             {links.map((value, index) => {
                 return <li key={`link ${index}`} className="headerMenu">
-                <a>
+                <a href={`#${value}`}>
                 {value}
                 </a>
                 </li>
-            })}
+            })
+            }
+            <a href="#footer"className="headerBtn mobile">Hire Me</a>
             </ul>
             <div className='menuDiv'>
                 <ThemeComponent />
                 <IoMdMenu  className= "menuIcon" onClick={handleToggle}/>
-                <Button displayWord="Hire Me" className="headerBtn"/>            
+                <a className='headerBtn' href='#footer'>Hire Me</a>            
             </div>
             
         </header>

@@ -29,8 +29,8 @@ header{
             display: flex;
             color: var(--default-white);
             padding: 0;
-            font-size: 20px;
-            align-items: center;    
+            align-items: center;
+            cursor: pointer; 
         }
         .headerBtn{
             display: none;
@@ -53,6 +53,9 @@ header{
                     color: var(--default-white);
                 }
             }
+            .mobile{
+                display: block;
+            }
         }
         .active{
                 display: flex;
@@ -71,5 +74,13 @@ header{
                     background: #6e07f3;
                 }
         }   
+    }
+    @include sm{
+        ul{
+            gap: 15px;
+            li{
+                font-size: 15px;
+            }
+        }
     }
 }

@@ -8,7 +8,7 @@ export const FirstSection = () => {
     
     
     return (
-        <section className='firstSection'>
+        <section id="About Me" className='firstSection'>
             <aside>
                 <div className='introDiv'>
                     <h1>
@@ -22,8 +22,7 @@ export const FirstSection = () => {
 
                 <div className='socialLinks'>
                     <h4>Check me on :</h4>
-                    <TbBrandGithubFilled className='gitIcon icon' />
-                    <RiLinkedinFill className='linkedIcon icon'/>
+                    <a nref="https://github.com/AYOPELUMI" target="_blank"><TbBrandGithubFilled className='gitIcon icon' /> </a>
                 </div>
             </aside>
             <aside>

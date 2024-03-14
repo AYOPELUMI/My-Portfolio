@@ -6,7 +6,7 @@ const skillList=["HTML","CSS","JAVASCRIPT","SASS","TAILWIND CSS","REACT","NEXTJS
 
 export const FourthSection = () => {
   return (
-    <section className='fourthSection'>
+    <section className='fourthSection' id='Skills'>
       <aside>
         <div className="topHeading">
             <h3>Skills & Experience</h3>

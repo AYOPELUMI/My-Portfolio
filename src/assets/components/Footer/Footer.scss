@@ -35,51 +35,57 @@
             text-align: center;
             margin: 0px 15px;
         }
-        .btnCtnr{
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            padding:10px 0px;
-            position: relative;
-            margin: 0px 15px;
-    
             .chatBtn{
                 width: fit-content;
-                padding: 10px 40px;
+                padding: 6px 20px;
                 display: flex;
-                gap: 5px;
                 align-items: center;
                 justify-content: center;
                 background: #7C5DFA;
                 color: white;
                 border-radius: 24px;
+                font-size: 15px;
+                text-decoration: none;
+                &:hover{
+                    opacity: 0.8;
+                }
+
+                svg{
+                    font-size: 24px;
+                    margin-left: 10px;
+                }
             }
-        }
     }
 
     .logo{
-        font-family: Motisan;
+        font-family: Apple Crush;
         font-weight: 900;
         color: white;
         font-size: 24px;
+        letter-spacing: 1.5px;
         text-align: center;
     }
     h2{
         font-family: Salks;
         font-size: 24px;
+        line-height: 23px;
         text-align: center;
 
         span{
             font-size: 14px;
-            font-family: Ralsteda Italics;
+            font-family: Futura;
         }
+    }
+    .contact{
+        margin-top: 40px;
+        margin-bottom: 10px;
     }
     .chatOptionsCtnr{
         list-style: none;
         width: 100%;
         display: flex;
         justify-content: center;
-        margin-top: 60px;
+
         
 
         li{
@@ -94,11 +100,21 @@
             justify-content: center;
             font-size: 18px;
             margin-right: 20px;
+            cursor: pointer;
 
+            a{
+                color: inherit;
+                background: inherit;
+            }
             &:hover{
                 background: white;
-                color: #6e07f3;
-                border: 1px solid white;
+                    color: #6e07f3;
+                    border: 1px solid white;
+                a{
+                    background: inherit;
+                    color: inherit;
+                    border: 1px solid inherit;
+                }
             }
         }
     }

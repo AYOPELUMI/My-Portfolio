@@ -33,7 +33,7 @@
             h3{
                 font-size: 19px;
                 line-height: 23px;
-                font-family: Smeltex;
+                font-family: Futura;
                 color: var(--font-color);
             }
         }
@@ -52,14 +52,9 @@
                 font-size: 24px;
             }
 
-            .linkedIcon{
-                color:var(--icon-linkedin);
-                &:hover{
-                    color: var(--icon-hover);
-                }
-            }
             .gitIcon{
                 color: var(--icon-github);
+                cursor: pointer;
 
                 &:hover{
                     color: var(--icon-hover);

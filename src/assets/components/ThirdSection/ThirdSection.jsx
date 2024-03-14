@@ -11,18 +11,18 @@ export const ThirdSection = () => {
     }
     console.log({showMore})
   return (
-    <section className={showMore? 'thirdSection active' :'thirdSection'}>
+    <section id="Recent Projects"className={showMore? 'thirdSection active' :'thirdSection'}>
         <div className="cardCtnr">
             <h4 className="heading">
                 Recent Projects
             </h4>
-            <div className=' card'>
+            <div className='card'>
                 <div className="cardBg"></div>
-                <img alt="Calculator" />
+                <img alt='Invoice app'/>
                 <div className='front'>
-                    <h4>Calculator</h4>
+                    <h4>Invoice App</h4>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt a excepturi nesciunt modi quidem porro deleniti veniam ea inventore corrupti illum, alias eum laborum nihil nisi. Necessitatibus hic distinctio cumque.</p>
-                    <a href="https://ayopelumi-calculator.netlify.app/" target='_blank'>Check it out</a>
+                    <a href="https://ayopelumi-invoiceapp.netlify.app/" target="_blank"> Check it out</a>
                 </div>
             </div>
             <div className='card'>
@@ -32,6 +32,15 @@ export const ThirdSection = () => {
                     <h4>BilL Splitter</h4>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt a excepturi nesciunt modi quidem porro deleniti veniam ea inventore corrupti illum, alias eum laborum nihil nisi. Necessitatibus hic distinctio cumque.</p>
                     <a href="https://ayopelumi-billsplitter.netlify.app/" target="_blank">Check it out </a>
+                </div>
+            </div>
+            <div className=' card'>
+                <div className="cardBg"></div>
+                <img alt="Calculator" />
+                <div className='front'>
+                    <h4>Calculator</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt a excepturi nesciunt modi quidem porro deleniti veniam ea inventore corrupti illum, alias eum laborum nihil nisi. Necessitatibus hic distinctio cumque.</p>
+                    <a href="https://ayopelumi-calculator.netlify.app/" target='_blank'>Check it out</a>
                 </div>
             </div>
             <div className='card'>
@@ -50,15 +59,6 @@ export const ThirdSection = () => {
                     <h4>Multi Step Form</h4>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt a excepturi nesciunt modi quidem porro deleniti veniam ea inventore corrupti illum, alias eum laborum nihil nisi. Necessitatibus hic distinctio cumque.</p>
                     <a href="https://ayopelumi-multistepform.netlify.app/" target='_blank'>Check it out</a>
-                </div>
-            </div>
-            <div className='card'>
-                <div className="cardBg"></div>
-                <img alt='Invoice app'/>
-                <div className='front'>
-                    <h4>Invoice App</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt a excepturi nesciunt modi quidem porro deleniti veniam ea inventore corrupti illum, alias eum laborum nihil nisi. Necessitatibus hic distinctio cumque.</p>
-                    <a href="https://ayopelumi-invoiceapp.netlify.app/" target="_blank"> Check it out</a>
                 </div>
             </div>
             <div className='card'>

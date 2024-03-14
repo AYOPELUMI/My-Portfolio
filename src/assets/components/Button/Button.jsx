@@ -16,16 +16,16 @@ export const Button = props => {
 	} = props
 	
   return (
-  	<>
-  		<button 
-  			type={type} 
-  			onClick={onClick} 
-  			className={className ? className : undefined}
-  			disabled={disabled || btnDisabled}>
+	<>
+		<button 
+			type={type} 
+			onClick={onClick} 
+			className={className ? className : undefined}
+			disabled={disabled || btnDisabled}>
 				{displayWord}
-  			{disabled ? <i className="loadingIcon"></i> : children}
-  		</button>
-  	</>
+			{disabled ? <i className="loadingIcon"></i> : children}
+		</button>
+	</>
   )
 }
 

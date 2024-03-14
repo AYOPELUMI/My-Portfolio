@@ -27,8 +27,8 @@
 }
 
 @font-face {
-    font-family: 'Motisan';
-    src: local('Motisan'),url(./assets/Fonts/motisan-brush-cufonfonts/MotisanBrush2-0W45z.otf)  format('opentype');
+    font-family: 'Apple Crush';
+    src: local('Motisan'),url(./assets/Fonts/apple-crush-cufonfonts/AppleCrush-zr8ML.ttf)  format('opentype');
 }
 
 @font-face {

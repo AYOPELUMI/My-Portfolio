@@ -1,8 +1,9 @@
 import {useState, useEffect} from "react"
 import {ThemeContext, themes} from "./ThemeContext.js"
-
+let localTheme = localStorage.getItem("theme") =="true"? themes.light : themes.dark
+console.log({localTheme})
 export function ThemeContextWrapper (props) {
-	const [theme, setTheme] = useState(themes.light)
+	const [theme, setTheme] = useState(localTheme)
 
 	function changeTheme (theme) {
 		setTheme(theme)

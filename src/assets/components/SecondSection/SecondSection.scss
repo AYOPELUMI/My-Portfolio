@@ -4,13 +4,14 @@
     max-height: 100vh;
     background:var(--whitesmoke-bg);
     display: flex;
-    padding: 190px 45px;
-    padding-top: 65px;
+    padding: 100px 45px;
+    padding-top: 80px;
 
     .serviceHeading{
         width: 50%;
-        height: fit-content;
-        padding-top: 70px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         text-align: center;
 
         h1{
@@ -23,7 +24,7 @@
             color: dodgerblue;
         }
         h4{
-            font-family: Smeltex;
+            font-family: Futura;
             font-size: 16px;
             line-height: 18px;
             color: var(--special-font);
@@ -34,8 +35,7 @@
         width: 50%;
         height: 100%;
         list-style: none;
-        padding-top: 50px;
-        
+        padding-left: 30px;
 
         li{
             margin: 20px 5px;
@@ -47,7 +47,9 @@
             font-weight: 900;
             color: var(--font-color);
             text-wrap: nowrap;
-
+            display: flex;
+            align-items: center;
+            gap: 12px;
         }
     }
 }
