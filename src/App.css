@@ -9,9 +9,7 @@
   position: relative;
   
 }
-section{
-  overflow: scroll;
-}
+
 
 @keyframes logo-spin {
   from {

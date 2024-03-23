@@ -89,7 +89,6 @@
         flex-basis: calc(33% - 30px);
         height: 320px;
         border-radius: 28px;
-        padding: 0px 15px;
         display: flex;
         flex-direction: column;
         position: relative;
@@ -124,21 +123,31 @@
 
         &:hover{
             color: white;
+            img{
+                top:-100%;
+            }
             .front{
-                top: 30%;
+                top: -20%;
             }
             .cardBg{
                 transform: scale(10);
             }
         }
+        img{
+            max-height: 40%;
+            position: relative;
+            top: 0;
+            transition: all 0.4s ease-in;
+        }
         .front{
             position: relative;
             background:transparent;
-            top: 82%;
+            top: 145px;
             padding-bottom: 30px;
             transition: all 0.3s ease;
             display: flex;
             flex-direction: column;
+            padding: 0px 15px;
         }
         .cardBg{
             height: 400px;
@@ -146,7 +155,7 @@
             background-color: #e44002;
             z-index: 1;
             position: absolute;
-            top: -300px;
+            bottom: -300px;
             right: -300px;
             border-radius: 50%;
             -webkit-transition: all .5s ease;
@@ -161,7 +170,7 @@
             letter-spacing: 1px;
             position: relative;
             z-index: 2;
-            margin-bottom: 35px;
+            margin-bottom: 25px;
         }
         p{
             font-family: Futura;
@@ -170,7 +179,7 @@
             font-size: 15px;
             line-height: 18px;
             z-index: 2;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
             flex: 1;
         }
         a{

@@ -22,7 +22,7 @@ export const FirstSection = () => {
 
                 <div className='socialLinks'>
                     <h4>Check me on :</h4>
-                    <a nref="https://github.com/AYOPELUMI" target="_blank"><TbBrandGithubFilled className='gitIcon icon' /> </a>
+                    <a href="https://github.com/AYOPELUMI" target="_blank"><TbBrandGithubFilled className='gitIcon icon' /> </a>
                 </div>
             </aside>
             <aside>

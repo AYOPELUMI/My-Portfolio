@@ -58,6 +58,15 @@
                 flex-basis: calc(50% - 30px);
                 height: 360px;
                 padding-bottom: 30px;
+
+                &:hover{
+                    .front{
+                        top: -20%;
+                    }
+                }
+                .front{
+                    top: 174px;
+                }
             }
             .heading{
                 flex-basis: calc(50% - 30px);
