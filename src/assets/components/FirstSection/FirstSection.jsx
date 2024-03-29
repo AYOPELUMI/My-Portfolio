@@ -12,11 +12,11 @@ export const FirstSection = () => {
             <aside>
                 <div className='introDiv'>
                     <h1>
-                        We  breath design,
-                        We execute ideas
+                        I am Ayodeji Ogundeji,<br />
+                        a web developer who execute ideas into reality
                     </h1>
                     <h3>
-                        Hi, i am a front end developer, creating good UI/UX experience, versatile codes
+                        Hi, i am a front end developer, creating good UI/UX experience, versatile codes, with loads of skills and quality attached within. Seeking opportunity to showcase skills.
                     </h3>
                 </div>
 
