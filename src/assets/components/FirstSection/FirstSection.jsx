@@ -1,5 +1,5 @@
 import {TbBrandGithubFilled} from "react-icons/tb"
-import { RiLinkedinFill } from 'react-icons/ri'
+import ProfilePic from "../../Images/Photoroom-20240329_172321.png"
 
 import "./FirstSection.scss"
 import "./Reponsive.scss"
@@ -26,6 +26,9 @@ export const FirstSection = () => {
                 </div>
             </aside>
             <aside>
+                <div className="imgCtnr">
+                    <img src={ProfilePic} alt="Profile Picture" />
+                </div>
                     <div className="hexagon"></div>
             </aside>
         </section>
