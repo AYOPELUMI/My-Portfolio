@@ -65,18 +65,19 @@
         }
 
         .imgCtnr{
-            width: 100%;
-            height: 90%;
+           width: 500px;
+           height: 500px;
+            border-radius: 50%;
             overflow: hidden;
-            display: none;
+            background: transparent; 
+            background-blend-mode: darken;
+            display: flex;
+            justify-content: center;
 
             img{
-                width: 100%;
-                position: relative;
-                z-index: 5;
-                padding-top: 50px;
-                display: none;
-            }
+                width: fit-content;
+                height: fit-content;
+                background-position: top;            }
         }
 
  @mixin animate($animation-name, $animation-duration, $animation-direction, $animation-iteration-count){
@@ -119,105 +120,105 @@
             //       }
             // }
 
-        .hexagon { 
-            position: absolute; 
-            margin: 0 auto; 
-            background-color: dodgerblue; 
-            border-radius: 14px; 
-            width: 400px;  
-            height: 252px; 
-            box-sizing: border-box; 
-            transition: all 1s; 
-            border: 0.4vh solid transparent; 
-            @include animate(animateRotate, 3s, linear, infinite);
+        // .hexagon { 
+        //     position: absolute; 
+        //     margin: 0 auto; 
+        //     background-color: dodgerblue; 
+        //     border-radius: 14px; 
+        //     width: 400px;  
+        //     height: 252px; 
+        //     box-sizing: border-box; 
+        //     transition: all 1s; 
+        //     border: 0.4vh solid transparent; 
+        //     @include animate(animateRotate, 3s, linear, infinite);
 
-            @include keyframes(animateRotate) {
-                0% {
-                  transform: rotate(0deg);
-                }
-                20%{
-                    transform: rotate(60deg);
-                }
-                40%{
-                    transform: rotate(120deg);
-                }
-                60%{
-                    transform: rotate(180deg);
-                }
-                80%{
-                    transform: rotate(240deg);
-                }
-                100% {
-                    transform: rotate(300deg);
-                }
-              }
-
-
-            &:before, &:after { 
-                content: ""; 
-                border: inherit; 
-                position: absolute; 
-                top: -0.5vh; 
-                left: -0.5vh; 
-                background-color: dodgerblue; 
-                border-radius: inherit; 
-                height: 100%; 
-                width: 100%; 
-            } 
-
-            &:before { 
-               transform: rotate(60deg); 
-                @include animate(animateBeforeRotate, 3s, linear, infinite);
-
-                @include keyframes(animateBeforeRotate) {
-                    0% {
-                      transform: rotate(60deg);
-                    }
-                    20%{
-                        transform: rotate(120deg);
-                    }
-                    40%{
-                        transform: rotate(180deg);
-                    }
-                    60%{
-                        transform: rotate(240deg);
-                    }
-                    80%{
-                        transform: rotate(300deg);
-                    }
-                    100% {
-                        transform: rotate(360deg);
-                    }
-                  }
-            } 
-            &:after { 
-                transform: rotate(-60deg);
-                // @include animate(animateAfterRotate, 3s, linear, infinite);
-
-                // @include keyframes(animateAfterRotate) {
-                //     0% {
-                //       transform: rotate(-360deg);
-                //     }
-                //     20%{
-                //         transform: rotate(-300deg);
-                //     }
-                //     40%{
-                //         transform: rotate(-240deg);
-                //     }
-                //     60%{
-                //         transform: rotate(-180deg);
-                //     }
-                //     80%{
-                //         transform: rotate(-60deg);
-                //     }
-                //     100% {
-                //         transform: rotate(-0deg);
-                //     }
-                //   }
-            }
+        //     @include keyframes(animateRotate) {
+        //         0% {
+        //           transform: rotate(0deg);
+        //         }
+        //         20%{
+        //             transform: rotate(60deg);
+        //         }
+        //         40%{
+        //             transform: rotate(120deg);
+        //         }
+        //         60%{
+        //             transform: rotate(180deg);
+        //         }
+        //         80%{
+        //             transform: rotate(240deg);
+        //         }
+        //         100% {
+        //             transform: rotate(300deg);
+        //         }
+        //       }
 
 
-        } 
+        //     &:before, &:after { 
+        //         content: ""; 
+        //         border: inherit; 
+        //         position: absolute; 
+        //         top: -0.5vh; 
+        //         left: -0.5vh; 
+        //         background-color: dodgerblue; 
+        //         border-radius: inherit; 
+        //         height: 100%; 
+        //         width: 100%; 
+        //     } 
+
+        //     &:before { 
+        //        transform: rotate(60deg); 
+        //         @include animate(animateBeforeRotate, 3s, linear, infinite);
+
+        //         @include keyframes(animateBeforeRotate) {
+        //             0% {
+        //               transform: rotate(60deg);
+        //             }
+        //             20%{
+        //                 transform: rotate(120deg);
+        //             }
+        //             40%{
+        //                 transform: rotate(180deg);
+        //             }
+        //             60%{
+        //                 transform: rotate(240deg);
+        //             }
+        //             80%{
+        //                 transform: rotate(300deg);
+        //             }
+        //             100% {
+        //                 transform: rotate(360deg);
+        //             }
+        //           }
+        //     } 
+        //     &:after { 
+        //         transform: rotate(-60deg);
+        //         // @include animate(animateAfterRotate, 3s, linear, infinite);
+
+        //         // @include keyframes(animateAfterRotate) {
+        //         //     0% {
+        //         //       transform: rotate(-360deg);
+        //         //     }
+        //         //     20%{
+        //         //         transform: rotate(-300deg);
+        //         //     }
+        //         //     40%{
+        //         //         transform: rotate(-240deg);
+        //         //     }
+        //         //     60%{
+        //         //         transform: rotate(-180deg);
+        //         //     }
+        //         //     80%{
+        //         //         transform: rotate(-60deg);
+        //         //     }
+        //         //     100% {
+        //         //         transform: rotate(-0deg);
+        //         //     }
+        //         //   }
+        //     }
+
+
+        // } 
       &:nth-child(2n){
         justify-content: center;
         align-items: center;

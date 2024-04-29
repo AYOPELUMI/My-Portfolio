@@ -1,19 +1,44 @@
-import {useState}from 'react'
+import {useState, useEffect}from 'react'
 import { ThemeComponent } from '../ThemeComponent/ThemeComponent'
 import {IoMdMenu} from "react-icons/io"
+import anime from "animejs"
 import "./Header.scss"
 import "./Reponsive.scss"
 
 export const Header = () => {
     const [toggleMenu, setToggleMenu] = useState(false)
+    const [section2, setSection2] = useState("")
     const links =["About Me","Skills","Recent Projects","Services"]
+
+    // Animation
+const animation = anime({
+    targets: ".header",
+    opacity:1,
+    duration: 4000,
+    autoplay: false,
+  });
+  
+   useEffect(()=>{ setSection2(document.querySelector(".firstSection"))},[])
+  // Animate on scroll
+  const animateOnScroll = function (div, speed=100, offset=200) {
+    const scrollPercent = (window.scrollY - div.offsetTop)*1000;
+    console.log("scroll difference" +scrollPercent)
+    console.log("% value is " +(scrollPercent + offset) / speed)
+    return (scrollPercent + offset) / speed;
+
+  };
+  
+  // Scroll listener
+  window.onscroll = function () {
+    animation.seek(animateOnScroll(section2, 1000, 200) * animation.duration);
+  };
 
     const handleToggle = () =>{
         setToggleMenu(!toggleMenu)
     }
 
     return (
-        <header>
+        <header className="header">
             <div className="logo">
             Ayodeji Pelumi
             </div>

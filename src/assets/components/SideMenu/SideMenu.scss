@@ -1,0 +1,30 @@
+.sideMenu{
+    width: 90px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: transparent;
+    padding: 12px 20px;
+    color: white;
+    justify-content: end;
+    padding-bottom: 70px;
+    align-items: center;
+    overflow: hidden;
+
+    hr{
+        width: 4px;
+        height: 15%;
+        background: white;
+        transform: translateY(150%);
+    }
+
+    .icon{
+        font-size: 40px;
+        background: transparent;
+        transform: translateY(1000%);
+    }
+}

@@ -2,12 +2,13 @@ header{
     width: 100%;
     position: fixed;
     padding: 12px 20px;
-    background: var(--white-bg);
+    background:  var(--white-bg);
     height: 70px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     top: 0;
+    opacity: 0;
     z-index: 99;
     border-bottom: 1px solid var(--font-black);
     transition: all 0.6s ease;

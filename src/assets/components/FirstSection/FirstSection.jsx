@@ -1,5 +1,5 @@
 import {TbBrandGithubFilled} from "react-icons/tb"
-import ProfilePic from "../../Images/Photoroom-20240329_172321.png"
+import ProfilePic from "../../Images/profile-pic.png"
 
 import "./FirstSection.scss"
 import "./Reponsive.scss"

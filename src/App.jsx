@@ -10,14 +10,15 @@ import "./fonts.css"
 import "./theme.css"
 import { FourthSection } from './assets/components/FourthSection/FourthSection'
 import { Footer } from './assets/components/Footer/Footer'
+import {TopSection} from "./assets/components/TopSection/TopSection"
 
 function App() {
-  const [count, setCount] = useState(0)
 
 
   return (
     <ThemeContextWrapper>
         <Header />
+        <TopSection />
         <FirstSection />
         <FourthSection />
         <ThirdSection />
