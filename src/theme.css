@@ -1,5 +1,8 @@
 :root{
+    --special-color:#7C5DFA;
     --font-color: #666;
+    --heading-color:#ccd6f6;
+    --sub-heading: #8892b0;
     --font-black:#000;
     --white-bg:white;
     --whitesmoke-bg:#f2f2f2;

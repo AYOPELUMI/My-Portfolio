@@ -18,7 +18,19 @@ const animation = anime({
     autoplay: false,
   });
   
-   useEffect(()=>{ setSection2(document.querySelector(".firstSection"))},[])
+   useEffect(()=>{ 
+        setSection2(document.querySelector(".firstSection"))
+
+        const handleEvent = () => {
+            // Perform actions on window resize
+            console.log("i am here")
+
+          };
+          window.addEventListener("scroll", handleEvent);
+          return () => {
+            window.removeEventListener('scroll', handleEvent);
+          };
+    },[])
   // Animate on scroll
   const animateOnScroll = function (div, speed=100, offset=200) {
     const scrollPercent = (window.scrollY - div.offsetTop)*1000;
@@ -32,6 +44,9 @@ const animation = anime({
   window.onscroll = function () {
     animation.seek(animateOnScroll(section2, 1000, 200) * animation.duration);
   };
+  // window.onload = function () {
+  //   animation.seek(animateOnScroll(section2, 1000, 200) * animation.duration);
+  // };
 
     const handleToggle = () =>{
         setToggleMenu(!toggleMenu)

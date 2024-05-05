@@ -28,12 +28,17 @@
 
 @font-face {
     font-family: 'Apple Crush';
-    src: local('Motisan'),url(./assets/Fonts/apple-crush-cufonfonts/AppleCrush-zr8ML.ttf)  format('opentype');
+    src: local('Apple'),url(./assets/Fonts/apple-crush-cufonfonts/AppleCrush-zr8ML.ttf)  format('opentype');
 }
 
 @font-face {
     font-family: 'Futura';
     src: local('Futura'),url(./assets/Fonts/futura-lt-cufonfonts/FuturaLT.ttf)  format('truetype');
+}
+
+@font-face {
+    font-family: 'Futura Light';
+    src: local('Futura'),url(./assets/Fonts/futura-lt-cufonfonts/FuturaLT-Light.ttf)  format('truetype');
 }
 
 @font-face {

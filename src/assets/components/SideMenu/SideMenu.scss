@@ -1,30 +1,36 @@
 .sideMenu{
     width: 90px;
-    height: 100%;
     display: flex;
     flex-direction: column;
     gap: 14px;
-    position: absolute;
+    position: fixed;
     left: 0;
-    top: 0;
+    bottom: 0;
     background: transparent;
-    padding: 12px 20px;
+    padding: 12px 12px;
     color: white;
     justify-content: end;
     padding-bottom: 70px;
     align-items: center;
     overflow: hidden;
+    z-index: 14;
 
     hr{
         width: 4px;
-        height: 15%;
+        height: 100px;
         background: white;
-        transform: translateY(150%);
+        transform: translateX(-100px);
     }
 
     .icon{
-        font-size: 40px;
-        background: transparent;
-        transform: translateY(1000%);
+
+        transform: translateX(-100px);
+        transition: transform 1s ;
+
+        svg{
+            background: transparent;
+            color: white;
+            font-size: 25px;
+        }
     }
 }

@@ -2,7 +2,7 @@
 
 header{
     @include xs{
-        position: static;
+        position: fixed;
         display: grid;
         grid-template-columns: 1fr 1fr;
         div{

@@ -1,11 +1,11 @@
 .thirdSection{
     width: 100vw;
+    height: auto;
     min-height: fit-content;
     background: var(--white-bg);
     display: flex;
     flex-direction: column;
-    padding: 0px 45px;
-    padding-top: 40px;
+    padding: 100px;
     position: relative;
     
     .heading{
@@ -87,8 +87,7 @@
         }
     .card{
         flex-basis: calc(33% - 30px);
-        height: 360px;
-        border-radius: 28px;
+        border-radius: 4px;
         display: flex;
         flex-direction: column;
         position: relative;
@@ -100,26 +99,6 @@
         transition: all 0.1s ease;
         overflow: hidden;
 
-        &:nth-child(2n){
-            .cardBg{
-                background: #952aff;
-            }
-        }
-        &:nth-child(3n){
-            .cardBg{
-                background: #4c49ea;
-            }
-        }
-        &:nth-child(4n){
-            .cardBg{
-                background: #cd3e94;
-            }
-        }
-        &:nth-child(5n){
-            .cardBg{
-                background: #3ecd5e;
-            }
-        }
 
         &:hover{
             color: white;
@@ -127,80 +106,61 @@
                 top:-100%;
             }
             .front{
-                top: -13%;
+                opacity: 1;
             }
-            .cardBg{
-                transform: scale(10);
-            }
+
         }
         img{
             width:auto;
-            position: relative;
-            top: 0;
-            height: 164px;
-            transition: all 0.4s ease-in;
+            height: auto;
+            min-height: 100%;
         }
         .front{
-            position: relative;
-            background:transparent;
-            top: 140px;
-            padding-bottom: 30px;
-            transition: all 0.3s ease;
+            position: absolute;
+            background:#1a1e1fd9;
+            width: 100%;
+            height: 100%;
+            transition: all 0.5s ease-in;
             display: flex;
             flex-direction: column;
-            padding: 0px 15px;
-        }
-        .cardBg{
-            height: 400px;
-            width: 400px;
-            background-color: #e44002;
-            z-index: 1;
-            position: absolute;
-            bottom: -300px;
-            right: -300px;
-            border-radius: 50%;
-            -webkit-transition: all .5s ease;
-            -o-transition: all .5s ease;
-            transition: all .5s ease;
+            align-items: center;
+            justify-content: center;
+            padding: 15px 15px;
+            opacity: 0;
+            gap: 8px;
         }
         h4{
             font-family: salks;
-            font-size: 28px;
-            text-wrap: wrap;
-            line-height: 29px;
+            font-size: 20px;
+            text-wrap: balance;
             letter-spacing: 1px;
             position: relative;
-            z-index: 2;
-            margin-bottom: 25px;
         }
         p{
             font-family: Futura;
             position: relative;
-            font-size: 15px;
-            line-height: 18px;
-            z-index: 2;
-            margin-bottom: 10px;
-            flex: 1;
+            font-size: 13px;
+            text-wrap: balance;
+            text-align: center;
         }
         a{
-            font-size: 16px;
+            font-size: 12   px;
             font-weight: 900;
             font-family: Futura;
-            text-decoration: underline;
-            position: relative;
-            z-index: 2;
             color: inherit;
-            display: flex;
-            align-items: center;
-            gap: 5px;
+            background-color: transparent;
+            border: 1px solid white;
+            border-radius: 4px;
+            padding: 0.5rem 1.1rem;
+            font-family: Futura;
+            text-decoration: none;
             width: fit-content;
-            transition: all 0.25s ease-in;
+            transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+
             &:hover{
-                transform: scale(1.15);
-                margin-left: 20px;
-            }
-            svg{
-                font-size: 20px;
+                transform: translate(2px, -4px);
+                outline: none;
+                box-shadow: 3px 3px 0 0 inherit;
             }
         }
 

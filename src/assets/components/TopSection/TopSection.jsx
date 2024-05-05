@@ -1,14 +1,18 @@
-import {useEffect, useState} from 'react'
+import {useEffect} from 'react'
 import "./TopSection.scss"
 import anime from "animejs"
-import { SideMenu } from '../SideMenu/SideMenu'
+ export const TopSection = (Props) => {
+    const{
+        updateHeight,
+        nameCtnrHeight
+    }= Props
 
- export const TopSection = () => {
-    const [startIconAnim, setStartIconAnim] = useState(false)
+    console.log(nameCtnrHeight)
+
     const animate = () =>{
         anime({
             targets: ".line",
-            width:600,
+            width:"50%",
             duration: 4000,
             delay: 400,
             easing: "easeInBack",
@@ -17,34 +21,42 @@ import { SideMenu } from '../SideMenu/SideMenu'
 
     }
     const animateLetters = () => {
-        anime({
-            targets: '.name',
-            keyframes: [
+        if (Number.isInteger(nameCtnrHeight)){
+            anime({
+                targets: '.name',
+                keyframes: [
+    
+                    {top: nameCtnrHeight - 110},
+                    {top: nameCtnrHeight-79},
+                ],
+                duration:2000,
+                delay:200,
+                easing: "easeInBack",
+            })
+    
+            anime({
+                targets: ".position",
+                keyframes:[
+                    {top: 145},
+                    {top: 123}
+                ],
+                duration: 2000,
+                delay:200,
+                easing: "easeInBack",
+                endDelay:400,
+                complete: () => {updateHeight(true)}
+    
+            })
+        }
 
-                {top: 390},
-                {top: 423},
-            ],
-            duration:2000,
-            delay:200,
-            easing: "easeInBack",
-        })
-
-        anime({
-            targets: ".position",
-            keyframes:[
-                {top: 130},
-                {top: 103}
-            ],
-            duration: 2000,
-            delay:200,
-            easing: "easeInBack",
-            complete: () => {setStartIconAnim(true)}
-
-        })
     }
     useEffect(()=>{
-        animate()
-    },[])
+        if(Number(nameCtnrHeight)){
+            animate()
+        }    
+
+    },[nameCtnrHeight])
+    
     return (
         <div className="topSection">
             <div className='nameCtnr'>
@@ -54,7 +66,6 @@ import { SideMenu } from '../SideMenu/SideMenu'
             <div className='positionCtnr'>
                 <p className="position">FRONT END DEVELOPER</p>
             </div>
-            <SideMenu  startIconAnim={startIconAnim}/>
         </div>
     )
 }

@@ -2,7 +2,7 @@
     width: 100vw;
     height: 100vh;
     background-image: url("../../Images/pexels-billelmoula-540518.jpg");
-    background-position: top;
+    background-size: cover;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -14,7 +14,7 @@
         font-family: salks;
         color: white;
         position: absolute;
-        top:100%;
+        top:1000px;
         // animation: animateDisplay 3s ease-in 0.2s;
 
         // @keyframes animateDisplay{

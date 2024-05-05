@@ -1,11 +1,10 @@
 .firstSection{
     width: 100vw;
-    min-height: 100vh;
+    height: auto;
+    min-height: 700px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 0px 55px;
-    padding-top: 90px;
-    padding-bottom: 60px;
+    padding: 100px;
     background: var(--white-bg);
 
     aside{
@@ -19,23 +18,45 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
+            align-items: center;
             padding-top: 80px;
 
             h1{
                 font-weight: 800;
                 font-size: 55px;
                 letter-spacing: -0.1px;
-                line-height: 53px;
                 font-family: Salks;
-                margin-bottom: 20px;
+                margin-bottom: 10px;
                 color: var(--font-color);
                 text-wrap: balance;
+                max-width: 580px;
             }
-            h3{
-                font-size: 19px;
-                line-height: 23px;
+            span{
+                color: var(--sub-heading);
+                font-size: 44px;
+                line-height: 1.1;
+                letter-spacing: -0.1px;
+                font-family: Salks;
+                font-weight: 800;
+
+            }
+            p{
+                font-size: 16px;
                 font-family: Futura;
-                color: var(--font-color);
+                color: var(--heading-color);
+                margin-top: 20px;
+                text-wrap: balance;
+                a{
+                    text-decoration: underline;
+                    cursor: pointer;
+                }
+                .specialChar{
+                    color: var(--special-color);
+                    font-size: inherit;
+                    font-weight: 900;
+                    font-family: salks;
+                    color: white;
+                }
             }
         }
         .socialLinks{

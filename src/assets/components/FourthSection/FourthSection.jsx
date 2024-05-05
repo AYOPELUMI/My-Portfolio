@@ -1,5 +1,7 @@
 import React from 'react'
-import { FaCode } from "react-icons/fa6";
+import { FaCheck } from "react-icons/fa";
+import { IoSettingsOutline } from "react-icons/io5";
+import { VscTools } from "react-icons/vsc";
 import "./FourthSection.scss"
 import "./Reponsive.scss"
 const skillList=["HTML","CSS","JAVASCRIPT","SASS","TAILWIND CSS","REACT","NEXTJS","TYPESCRIPT"]
@@ -9,8 +11,8 @@ export const FourthSection = () => {
     <section className='fourthSection' id='Skills'>
       <aside>
         <div className="topHeading">
-            <h3>Skills & Experience</h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex suscipit laborum optio dicta cupiditate illo, sit perspiciatis commodi ducimus nihil facere, eum corrupti dolores fugiat totam a nesciunt, consectetur cum.</p>
+            <h3> <IoSettingsOutline />Skills</h3>
+            <p>As a front end developer, I like to code things from scratch, and enjoy bringing ideas to life in any digital medium.</p>
         </div>
         <div className='skillSection'>
             <h1>Core Technologies</h1>
@@ -24,19 +26,14 @@ export const FourthSection = () => {
         </div>
       </aside>
       <aside>
-        <div className='heading'>
-            <FaCode className='logo'/>
-            <h3>Front End Developer</h3>
-            <p>I like to code things from scratch, and enjoy bringing ideas to life in the browser.</p>
-        </div>
-        <h4 className='lang'><span>Languages I speak:</span><br />HTML, CSS, Sass, Git</h4>
         <div className='tools'>
-            <h4>Dev Tools</h4>
-            <p>Bootstrap</p>
-            <p>Git</p>
-            <p>Github</p>
-            <p>Netlify</p>
-            <p>VSCode</p>
+            <h4> <VscTools /> Dev Tools</h4>
+            <p> <FaCheck/>Bootstrap</p>
+            <p><FaCheck/>Git + Github</p>
+            <p><FaCheck/>Command Line</p>
+            <p><FaCheck/>Netlify</p>
+            <p><FaCheck/>Chrome DevTools</p>
+            <p><FaCheck/>VSCode</p>
         </div>
       </aside>
     </section>

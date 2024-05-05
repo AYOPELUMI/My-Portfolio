@@ -8,26 +8,20 @@ export const SideMenu = (props) => {
         // eslint-disable-next-line no-unused-vars, react/prop-types
         startIconAnim
     } = props
+    console.log({startIconAnim})
     if (startIconAnim == true){
         anime({
             targets: '.target',
-            translateY: -10,
-            direction: 'linear',
-            loop: false,
-            delay: function(target, i, l=3) {
-              return i * 100;
-            },
-            endDelay: function(target, i, l=3) {
-              return (l - i) * 100;
-            }
+              translateX: 0,
+              duration: 4000,
+              delay: anime.stagger(1000, {easing: 'easeOutElastic(1, .6)'}),
           });
     }
 
-
     return (
         <div className='sideMenu'>
-            <TbBrandGithubFilled className='icon target'/>
-            <RiLinkedinFill className='icon target'/>
+            <a  className='icon target' href="https://github.com/AYOPELUMI" target="_blank"><TbBrandGithubFilled /> </a>
+            < a className='icon target' href="https://github.com/AYOPELUMI" target="_blank"><RiLinkedinFill /></a>
             <hr className="target" />
         </div>
     )
