@@ -12,14 +12,65 @@
             .introDiv{
                 width: 100%;
                 padding-top: 40px;
-
-                h3{
+                h1{
+                    font-size: 2.4em;
+                    text-align: center;
+                }
+                span{
+                    font-size: 1.3em;
+                }
+                p{
                     text-align: left;
-                    margin-top: 20px;
+                    font-size: 1.1em;
+                    white-space: pre-wrap;
                 }
             }
             &:nth-child(2){
-                display: none;
+                grid-row-start: 1;
+
+                .imgCtnr{
+                    width: 300px;
+                    height: 300px;
+
+                    img{
+                        width: 300px;
+                    }
+                }
+            }
+        }
+    }
+
+    @include sm{
+        grid-template-columns: 1fr;
+        padding-left: 40px;
+        aside{
+            .introDiv{
+                padding-top: 20px;
+                h1{
+                    font-size: 3.1em;
+                }
+                span{
+                    text-align: center;
+                }
+                p{
+                    text-align: center;
+                    max-width: 80%;
+                    text-wrap: pretty;
+                }
+            }
+        }
+        aside:nth-child(2n){
+            grid-row-start: 1;
+
+            .imgCtnr{
+                width: 400px;
+                height: 400px;
+                align-items: start;
+                padding-bottom: 50px;
+
+                img{
+                    margin-top: -160px;
+                }
             }
         }
     }

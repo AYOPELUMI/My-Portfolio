@@ -1,14 +1,76 @@
 @import "../../ReponsiveStyles/mobileDesign.scss";
 
+#toggle{
+    @include xs{
+            display: block;
+    }
+    @include sm{
+        display: block;
+    }
+}
+
+.overlay{
+    @include sm{
+        display: flex;
+        -webkit-box-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        align-items: center;
+        position: fixed;
+        top: 0px;
+        bottom: 0px;
+        right: 0px;
+        left: revert;
+        padding: 50px 10px;
+        width: min(75vw, 400px);
+        height: 100vh;
+        outline: 0px;
+        background-color: #112240;
+        box-shadow: -10px 0px 30px -15px #020c1bb3;
+        z-index: 100;
+        transform: translateX(100vw);
+        visibility: hidden;
+        transition:  all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+    }
+}
+.open{
+    @include sm{
+        display: inline-block;
+        -webkit-box-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        align-items: center;
+        position: fixed;
+        top: 0px;
+        bottom: 0px;
+        right: 0px;
+        left: revert;
+        padding: 10px 20px;
+        width: min(75vw, 400px);
+        height: 100vh;
+        outline: 0px;
+        background-color: #112240;
+        box-shadow: -10px 0px 30px -15px #020c1bb3;
+        z-index: 100;
+        transform: translateX(0vw);
+        visibility: visible;
+        transition:  all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+    }
+}
 header{
     @include xs{
         position: fixed;
+        padding: 20px;
         display: grid;
         grid-template-columns: 1fr 1fr;
         div{
             padding: 10px;
         }
+        .active{
+            display: none;
+        }
         ul{
+            display: none;
             width: 100%;
             flex-direction: column;
             display: none;
@@ -58,7 +120,7 @@ header{
             }
         }
         .active{
-                display: flex;
+                display: none;
                 height: fit-content;
                 padding-top: 20px;
                 background: inherit;
@@ -76,6 +138,13 @@ header{
         }   
     }
     @include sm{
+        display: none;
+        #toggle{
+            display: block;
+        }
+        .menuDiv{
+            margin-right: 40px;
+        }
         ul{
             gap: 15px;
             li{

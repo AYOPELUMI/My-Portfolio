@@ -2,13 +2,13 @@
 
 .thirdSection{
     @include xs{
-        min-height: 600px;
-        max-height: 1015px;
+        min-height: 745px;
+        height: 0;
+        max-height: 1570px;
         overflow: hidden;
         flex-direction: column;
         align-items: center;
-        padding-left: 30px;
-        padding-right: 30px;
+        padding: 40px 30px;
 
         .cardCtnr{
             .heading{
@@ -16,18 +16,10 @@
             }
 
             .card{
-                flex-basis: content;
-                height: 380px;
-                padding-bottom: 80px;
+                flex-basis: content;    
 
                 .front{
-                    top: 30%;
                     color: white;
-                    padding-bottom: 50px;
-                }
-
-                .cardBg{
-                    transform: scale(4);
                 }
             }
         }
@@ -56,17 +48,8 @@
         .cardCtnr{
             .card{
                 flex-basis: calc(50% - 30px);
-                height: 360px;
                 padding-bottom: 30px;
 
-                &:hover{
-                    .front{
-                        top: -20%;
-                    }
-                }
-                .front{
-                    top: 174px;
-                }
             }
             .heading{
                 flex-basis: calc(50% - 30px);
@@ -76,6 +59,6 @@
 }
 .active{
     color: blue;
-    max-height: fit-content;
+    height: fit-content;
     padding-bottom: 30px;
 }

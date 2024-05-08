@@ -12,26 +12,39 @@ import { MyResume } from './assets/components/MyResume/MyResume'
 import './App.css'
 import "./fonts.css"
 import "./theme.css"
+import "./App.scss"
 
 
 
 function App() {
   const [height,setHeight] = useState(false)
+  const [toggle, setToggle] = useState(false)
   const [nameCtnrHeight, setNameCtnrHeight] = useState("ab")
+  const [nameHeight, setNameHeight] = useState("")
+  console.log({nameCtnrHeight})
 
   function updateHeight(args){
     console.log({args})
       setHeight(true)
   }
+
+  function updateToggle(args){
+    setToggle(args)
+  }
   useEffect(() => {
     setNameCtnrHeight(document.querySelector(".nameCtnr").clientHeight)
+    setNameHeight(document.querySelector(".name").offsetHeight)
     const handleResize = () => {
       // Perform actions on window resize
       console.log("i am here")
       setNameCtnrHeight(document.querySelector(".nameCtnr").clientHeight)
+      console.log(document.querySelector(".nameCtnr").clientHeight)
+      setNameHeight(document.querySelector(".name").offsetHeight)
     };
-    window.addEventListener('resize', handleResize);
-    window.addEventListener("load", handleResize);
+
+
+    window.addEventListener('resize',()=>{console.log("in the resize"); handleResize()});
+    window.addEventListener("load",()=>{console.log("in the load"); handleResize()});
     return () => {
       window.removeEventListener('resize', handleResize);
       window.removeEventListener('load',handleResize)
@@ -40,15 +53,19 @@ function App() {
 
   return (
     <ThemeContextWrapper>
-        <Header />
-        <TopSection updateHeight={updateHeight} nameCtnrHeight={nameCtnrHeight}/>
-        <FirstSection />
-        <FourthSection />
-        <ThirdSection />
-        <SecondSection />
-        <MyResume />
-        <SideMenu startIconAnim={height} />
-        <Footer />
+      <div className={toggle == true? "root" : "noscroll"}>
+          
+          <Header  updateToggle={updateToggle}/>
+          <TopSection updateHeight={updateHeight} nameHeight={nameHeight} nameCtnrHeight={nameCtnrHeight}/>
+          <FirstSection />
+          <FourthSection />
+          <ThirdSection />
+          <SecondSection />
+          <MyResume />
+          <SideMenu startIconAnim={height} />
+          <Footer />
+
+      </div>
     </ThemeContextWrapper>
   )
 }

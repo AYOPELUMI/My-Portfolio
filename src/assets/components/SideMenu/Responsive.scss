@@ -1,0 +1,21 @@
+@import "../../ReponsiveStyles/mobileDesign.scss";
+
+.sideMenu{
+    @include xs{
+        padding: 12px 10px;
+        .icon{
+            svg{
+                font-size: 18px;
+            }
+        }
+    }
+    @include sm{
+    padding: 12px 10px;
+    padding-bottom: 20px;
+        .icon{
+            svg{
+                font-size: 18px;
+            }
+        }
+    }
+}

@@ -1,7 +1,7 @@
-import React from 'react'
 import {TbBrandGithubFilled} from "react-icons/tb"
 import{RiLinkedinFill } from "react-icons/ri"
 import "./SideMenu.scss"
+import "./Responsive.scss"
 import anime from "animejs"
 export const SideMenu = (props) => {
     const{
@@ -20,8 +20,8 @@ export const SideMenu = (props) => {
 
     return (
         <div className='sideMenu'>
-            <a  className='icon target' href="https://github.com/AYOPELUMI" target="_blank"><TbBrandGithubFilled /> </a>
-            < a className='icon target' href="https://github.com/AYOPELUMI" target="_blank"><RiLinkedinFill /></a>
+            <a  className='icon target'  rel="noopener noreferrer" href="https://github.com/AYOPELUMI" target="_blank"><TbBrandGithubFilled /> </a>
+            < a className='icon target' rel="noopener noreferrer" href="https://github.com/AYOPELUMI" target="_blank"><RiLinkedinFill /></a>
             <hr className="target" />
         </div>
     )

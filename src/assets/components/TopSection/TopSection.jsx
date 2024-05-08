@@ -1,20 +1,21 @@
-import {useEffect} from 'react'
+import {useEffect, useState} from 'react'
 import "./TopSection.scss"
+import "./Responsive.scss"
 import anime from "animejs"
  export const TopSection = (Props) => {
     const{
         updateHeight,
-        nameCtnrHeight
+        nameCtnrHeight,
+        nameHeight
     }= Props
-
     console.log(nameCtnrHeight)
 
     const animate = () =>{
         anime({
-            targets: ".line",
+            targets: ".hrLine",
             width:"50%",
-            duration: 4000,
-            delay: 400,
+            duration: 1500,
+            delay: 200,
             easing: "easeInBack",
             complete: () => animateLetters()
         })
@@ -27,9 +28,9 @@ import anime from "animejs"
                 keyframes: [
     
                     {top: nameCtnrHeight - 110},
-                    {top: nameCtnrHeight-79},
+                    {top: nameCtnrHeight-nameHeight},
                 ],
-                duration:2000,
+                duration:1500,
                 delay:200,
                 easing: "easeInBack",
             })
@@ -37,13 +38,13 @@ import anime from "animejs"
             anime({
                 targets: ".position",
                 keyframes:[
-                    {top: 145},
-                    {top: 123}
+                    {top: 135},
+                    {top: 103}
                 ],
-                duration: 2000,
+                duration: 1500,
                 delay:200,
                 easing: "easeInBack",
-                endDelay:400,
+                endDelay:100,
                 complete: () => {updateHeight(true)}
     
             })
@@ -54,19 +55,18 @@ import anime from "animejs"
         if(Number(nameCtnrHeight)){
             animate()
         }    
-
-    },[nameCtnrHeight])
+    },[nameCtnrHeight, nameHeight])
     
     return (
-        <div className="topSection">
+        <section className="topSection">
             <div className='nameCtnr'>
-                <h2 className="name">Ogundeji Oluwapelumi</h2>
+                <h2 className="name">Ayodeji Ogundeji </h2>
             </div>
-            <hr className='line'/>
+            <hr className='hrLine'/>
             <div className='positionCtnr'>
                 <p className="position">FRONT END DEVELOPER</p>
             </div>
-        </div>
+        </section>
     )
 }
 

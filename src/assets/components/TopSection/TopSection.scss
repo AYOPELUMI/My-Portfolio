@@ -1,5 +1,5 @@
 .topSection{
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     background-image: url("../../Images/pexels-billelmoula-540518.jpg");
     background-size: cover;
@@ -36,7 +36,7 @@
         align-items: end;
         overflow: hidden;
     }
-    .line{
+    .hrLine{
         width: 1px;
         height: 3px;
         background: white;
@@ -63,7 +63,6 @@
         position: relative;
         width: 100%;
         height: 50%;
-        z-index: 10;
         display: flex;
         justify-content: center;
         overflow: hidden;

@@ -3,13 +3,13 @@
     min-height: fit-content;
     max-height: 100vh;
     position: relative;
-    background:#6e07f3;
+    background:#112240;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     padding: 80px 45px;
     color: white;
-    z-index: 20;
+    z-index: 1000;
 
     .topContent{
         position: absolute;
@@ -25,7 +25,6 @@
         border-radius: 20px;
         text-align: center;
         h3{
-            flex: 1;
             font-family: Salks;
             font-size: 28px;
             margin: 0px 15px;
@@ -58,14 +57,6 @@
             }
     }
 
-    .logo{
-        font-family: Apple Crush;
-        font-weight: 900;
-        color: white;
-        font-size: 24px;
-        letter-spacing: 1.5px;
-        text-align: center;
-    }
     h2{
         font-family: Salks;
         font-size: 24px;
@@ -104,8 +95,10 @@
             cursor: pointer;
 
             a{
+                font-size: 24px;
                 color: inherit;
                 background: inherit;
+                transform: translateY(10%);
             }
             &:hover{
                 background: white;

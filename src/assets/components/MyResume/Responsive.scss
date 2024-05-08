@@ -1,0 +1,29 @@
+@import "../../ReponsiveStyles/mobileDesign.scss";
+
+.resumeCtnr{
+    @include xs{
+        height: 120px;
+        padding: 10px 30px;
+        h2{
+            margin-top: 20px;
+            font-size: 1.3em;
+            margin-bottom: 10px;
+           
+        }
+        .resume-button{
+            padding: 0.4em 0.7em;
+            margin-bottom: 20px;
+        }
+    }
+    @include sm{
+        height: 200px;
+
+        h2{
+            font-size: 1.8em;
+        }
+
+        .resume-button{
+            padding: 0.5em 1em;
+        }
+    }
+}

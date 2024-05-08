@@ -4,7 +4,7 @@
     min-height: 700px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 100px;
+    padding: 100px 70px;
     background: var(--white-bg);
 
     aside{
@@ -46,6 +46,7 @@
                 color: var(--heading-color);
                 margin-top: 20px;
                 text-wrap: balance;
+                white-space: pre-line;
                 a{
                     text-decoration: underline;
                     cursor: pointer;

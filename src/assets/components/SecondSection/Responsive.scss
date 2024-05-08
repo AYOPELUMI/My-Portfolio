@@ -3,17 +3,61 @@
     @include xs{
          flex-direction: column;
          height: fit-content;
-         padding-top: 30px;
-         padding-bottom: 60px;
-         padding-left: 30px;
-         padding-right: 30px;
+         padding: 40px 30px;
 
          .serviceHeading{
             width: 100%;
             padding-top: 20px;
+            text-align: left;
+
+            h1{
+               font-size: 2.4em;
+            }
+            p{
+               font-size: 1.3em;
+               width: 100%;
+               white-space: pre-wrap;
+            }
          }
          .list{
             width: 100%;
          }
+    }
+    @include sm{
+      padding-top: 50px;
+      padding-bottom: 50px;
+
+      .serviceHeading{
+         h1{
+            font-size: 3.1em;
+            line-height: 1;
+            margin-bottom: 20px;
+         }
+
+         p{
+            font-size: 1.1em;
+            line-height: 1;
+         }
+      }
+
+      .list{
+         margin-top: 30px;
+         li{
+            width: 45%;
+            flex-basis: inherit;
+            gap: 0;
+            h4{
+               font-size: 17px;
+               line-height: 0;
+
+               svg{
+                  font-size: 40px;
+               }
+            }
+            p{
+               font-size: 15px;
+            }
+         }
+      }
     }
 }

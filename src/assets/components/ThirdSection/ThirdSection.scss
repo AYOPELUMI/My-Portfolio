@@ -1,11 +1,11 @@
 .thirdSection{
     width: 100vw;
     height: auto;
-    min-height: fit-content;
+    min-height: 700px;
     background: var(--white-bg);
     display: flex;
     flex-direction: column;
-    padding: 100px;
+    padding: 100px 70px;
     position: relative;
     
     .heading{
@@ -102,10 +102,8 @@
 
         &:hover{
             color: white;
-            img{
-                top:-100%;
-            }
             .front{
+                z-index: 10;
                 opacity: 1;
             }
 
@@ -113,7 +111,9 @@
         img{
             width:auto;
             height: auto;
-            min-height: 100%;
+            min-height: 166px;
+            position: relative;
+            z-index: 5;
         }
         .front{
             position: absolute;
@@ -126,6 +126,7 @@
             align-items: center;
             justify-content: center;
             padding: 15px 15px;
+            z-index: 2;
             opacity: 0;
             gap: 8px;
         }

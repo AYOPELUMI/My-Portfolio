@@ -35,9 +35,6 @@ export const Footer = () => {
       </div>
 
       <div>
-        <div className="logo">
-            Ayodeji<br />Pelumi
-        </div>
         <h2>Live, learn, & level up everyday.<span>- life Motto</span></h2>
         <h2 className="contact">Contact Me :</h2>
         <ul className='chatOptionsCtnr'>

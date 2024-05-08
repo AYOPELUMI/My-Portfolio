@@ -2,10 +2,18 @@
 
 .footer{
     @include xs{
-        padding-top: 220px;
+        padding: 20px 30px;
+        gap: 30px;
         .topContent{
             flex-direction: column;
             gap: 20px;
+            top: revert;
+            position: relative;
+            width: 100%;
+
+            h3{
+                font-size: 1.3em;
+            }
         }
     }
 }

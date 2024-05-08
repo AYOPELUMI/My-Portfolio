@@ -11,8 +11,8 @@ export const SecondSection = () => {
     return (
         <section id="Services" className='secondSection'>
             <div className='serviceHeading'>
-                <h1>WHAT I DO</h1>
-                <h4>I design web apps, breathing life into ideas with frameworks.My passion lies in optimizing codes, good UI&UX experience From idea to launch, i cultivate all ideas into reality</h4>
+                <h1>What I Do</h1>
+                <p>I design web apps, breathing life into ideas with frameworks.My passion lies in optimizing codes, good UI&UX experience From idea to launch, i cultivate all ideas into reality</p>
             </div>
                 <ul className='list'>
                     <li> 

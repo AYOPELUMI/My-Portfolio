@@ -31,7 +31,6 @@ export const FirstSection = () => {
                 <div className="imgCtnr">
                     <img src={ProfilePic} alt="Profile Picture" />
                 </div>
-                    <div className="hexagon"></div>
             </aside>
         </section>
     )

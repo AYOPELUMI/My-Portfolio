@@ -1,5 +1,5 @@
 .sideMenu{
-    width: 90px;
+    width: fit-content;
     display: flex;
     flex-direction: column;
     gap: 14px;
@@ -7,7 +7,7 @@
     left: 0;
     bottom: 0;
     background: transparent;
-    padding: 12px 12px;
+    padding: 12px 20px;
     color: white;
     justify-content: end;
     padding-bottom: 70px;
