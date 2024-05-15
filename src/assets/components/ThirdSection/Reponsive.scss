@@ -60,17 +60,17 @@
             }
         }
     }
-    .active{
-        color: blue;
-        height: fit-content;
-        padding-bottom: 30px;
-    
-        .cardCtnr{
-            height: 100%;
-        }
-        .responsiveFooter{
-            bottom: 0;
-        }
+
+}
+.activeAccordion{
+    color: blue;
+    height: fit-content;
+    padding-bottom: 30px;
+
+    .cardCtnr{
+        height: 100%;
+    }
+    .responsiveFooter{
+        bottom: 0;
     }
 }
-

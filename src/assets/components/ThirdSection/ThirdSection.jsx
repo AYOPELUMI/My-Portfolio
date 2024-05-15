@@ -19,7 +19,7 @@ export const ThirdSection = () => {
     }
     console.log({showMore})
   return (
-    <AnimateComponent id="Recent Projects"className={showMore? 'thirdSection active' :'thirdSection' }
+    <AnimateComponent id="Recent Projects"className={showMore? 'thirdSection activeAccordion' :'thirdSection' }
        component={
             <>
                 <div className="sticky">Recent Projects</div>
