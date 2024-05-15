@@ -1,3 +1,60 @@
+@import "./assets/ReponsiveStyles/mobileDesign.scss";
+.sticky{
+  display: none;
+}
+@keyframes fadeIn {
+  0% {
+      opacity: 0
+  }
+
+  to {
+      opacity: 1
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 2s;
+  animation-delay: 2s;
+}
+
+@keyframes slideUp {
+  0% {
+      transform: translateY(100%)
+  }
+
+  to {
+      transform: translateY(0)
+  }
+}
+
+.animate-slideUpCubiBezier {
+  animation: slideUp 1s cubic-bezier(.165,.84,.44,1)
+}
+
+.section{
+
+}
+@include xs{
+    .sticky{
+        position: sticky;
+        top: 0;
+        margin-top: -40px;
+        margin-left: -30px;
+        right: 0;
+        grid-row-start: 1;
+        align-self: start;
+        background: inherit;
+        backdrop-filter: blur(8px);
+        width: 110%;
+        padding: 1em 0.5em;
+        color: white;
+        font-size: 1.4em;
+        z-index: 99;
+        font-weight: 700;
+        font-family: Futura Bold;
+    }
+}
+
 .noscroll {
     width: 100vw;
     min-width: 320px;

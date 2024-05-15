@@ -1,6 +1,5 @@
-import {useState, useEffect}from 'react'
-import { ThemeComponent } from '../ThemeComponent/ThemeComponent'
-import {IoMdMenu} from "react-icons/io"
+/* eslint-disable no-mixed-spaces-and-tabs */
+import {useState, useEffect, useRef,useCallback}from 'react'
 import anime from "animejs"
 import "./Header.scss"
 import "./Reponsive.scss"
@@ -13,33 +12,76 @@ export const Header = (props) => {
     const [section2, setSection2] = useState("")
     const [collapse, setCollapse] = useState(false)
     const [lastScrollPosition, setLastScrollPosition] = useState(0)
+    const [showHeader, setShowHeader] = useState(false)
     const links =["About Me","Skills","Recent Projects","Services"]
+    const ref =useRef()
+    console.log({collapse},{showHeader})
 
   const handleEvent = () => {
     console.log("i am here")
     animateOnScroll(section2)
+    console.log(window.scrollY)
+    console.log({lastScrollPosition})
     setLastScrollPosition(window.scrollY)
     if (lastScrollPosition < window.scrollY){
+      console.log(true)
       setCollapse(true)
     }
     else{
+      console.log(false)
       setCollapse(false)
     }
 
   };
+  const handleClosingEvent = (event) => {
+  console.log("in here")
+  console.log(ref)
+      if(toggleMenu==true && !ref.current.contains(event.target)){
+      console.log(true)
+      setToggleMenu(false)  
+  }
+  }
+  	const handleCloseFilter =() =>{
+		setToggleMenu(false)
+	}
+	function useOutsideClick(handleClose, ref) {
+    const handleClick = useCallback((event) => {
+    console.log(event.target)
+    console.log({event})
+    console.log("inside the callback",{toggleMenu})
+	  if (toggleMenu == true && ref?.current?.contains && !ref.current.contains(event.target)) {
+      console.log("not in the ref")
+	    handleClose();
+		}
+    console.log(event.target.parentNode.className)
+    if(event.target.parentNode.id != "toggle" && event.target.parentNode.className !="overlayMenu" && event.target.parentNode.className != "container active"  && event.target.className != "overlay open"){
+    console.log("it is true")
+    handleClose();
+    }
+		},[handleClose, ref])
+    useEffect(() => {
+		  document.addEventListener("mouseup", handleClick)
+		  return () => { document.removeEventListener("mouseup", handleClick); }
+		}, [])
+
+    }
+    useOutsideClick(handleCloseFilter, ref);
+
    useEffect(()=>{ 
         setSection2(document.querySelector(".firstSection"))
           window.addEventListener("scroll", handleEvent);
           window.addEventListener("load", handleEvent);
-          return () => {
+        return () => {
             window.removeEventListener('scroll', handleEvent);
             window.removeEventListener('load', handleEvent);
-
           };
     },[section2,collapse,lastScrollPosition])
   // Animate on scroll
   const animateOnScroll = function (div) {
-    if (window.scrollY >= div.offsetTop){
+      console.log(div.offsetHeight)
+      console.log(div.screenHeight)
+    if (window.scrollY >= div.scrollHeight){
+      setShowHeader(true)
       anime({
         targets: ".header",
         opacity:1,
@@ -49,6 +91,7 @@ export const Header = (props) => {
       });
     }
     else{
+      setShowHeader(false)
       anime({
         targets: ".header",
         opacity:0,
@@ -61,8 +104,10 @@ export const Header = (props) => {
   }
 
     const handleToggle = () =>{
-        setToggleMenu(!toggleMenu)
-        updateToggle(!toggleMenu)
+      console.log("i am here")
+      console.log(!toggleMenu)
+      setToggleMenu(!toggleMenu)
+      updateToggle(!toggleMenu)
     }
     if(toggleMenu){
     // let body=  document.getElementsByTagName("body")[0]
@@ -74,20 +119,19 @@ export const Header = (props) => {
       document.body.className = ""
     }
     return (
-      <>
-      {collapse ? null :
+      <div>
       <div id="toggle" onClick={handleToggle} className= {toggleMenu ?"container active" : "container"}>
           <span className="line top"></span>
           <span className="line middle"></span>
           <span className="line bottom"></span>
       </div>
-}
-      <div className={toggleMenu ? "overlay open" : "overlay" }>
+    {toggleMenu && (
+      <div  className={toggleMenu ? "overlay open" : "overlay" }>
       <div className="logo">
               Ayodeji<br /> Pelumi
       </div>
-        <nav className='overlayMenu'>
-        <ul className= "menuCtnr">
+        <nav ref={ref} className='overlayMenu'>
+        <ul onClick={handleToggle}className= "menuCtnr">
               {links.map((value, index) => {
                   return <li key={`link ${index}`} className="menuItem">
                   <a href={`#${value}`}>
@@ -100,10 +144,10 @@ export const Header = (props) => {
               <a href="#footer"className="menuBtn mobile menuItem">Hire Me</a>
               </ul>
         </nav>
-      </div>
+      </div>)}
       {
-        collapse? null :
-      
+        collapse ? null :
+          showHeader?
           <header className="header">
               <div className="logo">
               Ayodeji Pelumi
@@ -128,9 +172,9 @@ export const Header = (props) => {
                   <a className='headerBtn' href='#footer'>Hire Me</a>            
               </div>
               
-          </header>
+          </header> : null
     }
-      </>
+    </div>
     )
 }
 

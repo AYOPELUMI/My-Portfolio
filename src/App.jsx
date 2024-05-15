@@ -9,6 +9,7 @@ import { Footer } from './assets/components/Footer/Footer'
 import {TopSection} from "./assets/components/TopSection/TopSection"
 import {SideMenu} from "./assets/components/SideMenu/SideMenu"
 import { MyResume } from './assets/components/MyResume/MyResume'
+import { AnimateComponent } from './assets/components/AnimateComponent/AnimateComponent'
 import './App.css'
 import "./fonts.css"
 import "./theme.css"
@@ -53,19 +54,15 @@ function App() {
 
   return (
     <ThemeContextWrapper>
-      <div className={toggle == true? "root" : "noscroll"}>
-          
-          <Header  updateToggle={updateToggle}/>
-          <TopSection updateHeight={updateHeight} nameHeight={nameHeight} nameCtnrHeight={nameCtnrHeight}/>
-          <FirstSection />
-          <FourthSection />
-          <ThirdSection />
-          <SecondSection />
-          <MyResume />
-          <SideMenu startIconAnim={height} />
-          <Footer />
-
-      </div>
+        <Header  updateToggle={updateToggle}/>
+        <TopSection updateHeight={updateHeight} nameHeight={nameHeight} nameCtnrHeight={nameCtnrHeight}/>
+        <FirstSection />
+        <FourthSection />
+        <ThirdSection />
+        <SecondSection />
+        <MyResume />
+        <SideMenu startIconAnim={height} />
+        <Footer />
     </ThemeContextWrapper>
   )
 }

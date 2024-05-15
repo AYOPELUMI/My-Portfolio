@@ -6,6 +6,7 @@
     grid-template-columns: 1fr 1fr;
     padding: 100px 70px;
     background: var(--white-bg);
+    position: relative;
 
     aside{
         display: flex;
@@ -87,8 +88,8 @@
         }
 
         .imgCtnr{
-           width: 500px;
-           height: 500px;
+           max-width: 500px;
+           max-height: 500px;
             border-radius: 50%;
             overflow: hidden;
             background: transparent; 

@@ -4,13 +4,15 @@
     min-height: 700px;
     background:var(--whitesmoke-bg);
     display: flex;
-    flex-direction: column;
     padding: 100px 70px;
+    position: relative;
 
     .serviceHeading{
+        flex: 1;
         display: flex;
+        margin-top: 60px;
         flex-direction: column;
-        justify-content: center;
+        justify-content: start;
         text-align: center;
         align-items: center;
 
@@ -33,7 +35,9 @@
         }
     }
     .list{
+        flex: 1;
         display: flex;
+        flex-direction: column;
         gap: 20px;
         flex-wrap: wrap;
         height: fit-content;
@@ -42,41 +46,127 @@
         padding-left: 1px;
 
         li{
-            flex:1;
-            height: 100%;
-            padding-top: 25px;
+            height: fit-content;
             font-size: 28px;
             letter-spacing: normal;
-            border-top: 3px solid var(--border-black);
+            background: #edd9f2;
             display: flex;
             flex-direction: column;
-            gap: 12px;
+            padding: 22px 40px;
+            border-radius: 3rem;
+             &:nth-child(2){
+                background: #c5f0fd;
+             }
+             &:nth-child(3){
+                background: #bbe6ac;
 
-            h4{
-                display: flex;
-                align-items: center;
-                gap: 12px;
-                font-size: 23px;
-                line-height: 1.1;
-                margin-bottom: 20px;
-                text-transform: uppercase;
-                font-family: Futura Bold;
-                color: var(--font-color);
-
-                svg{
-                    font-size: 60px;
+                .accordionHeader{
+                    .icon{
+                        width: 50px;
+                        height: 50px;
+                        background-image: url("../../Images/UI-Research.png");
+                    }
                 }
-            
+             }
+
+            .accordionHeader{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .icon{
+                    grid-row-start: 1;
+                    font-size: 50px;
+                    line-height: 1.1;
+                    text-transform: uppercase;
+                    font-family: Futura Bold;
+                    color: var(--font-color);
+                    color: #112969;
+                    margin-right: 30px;
+
+
+                }
+
+                .iconPlus{
+                    align-items: center;
+                    display: flex;
+                    height: 20px;
+                    justify-content: center;
+                    margin-left: auto;
+                    position: relative;
+                    width: 20px;
+                    span{
+                        background: #112969;
+                        height: 2px;
+                        width: 20px;
+                        flex-shrink: 0;
+                        position: absolute;
+                        opacity: 1;
+                        transition: opacity .2s ease-out;
+    
+                        &:first-child{
+                            height: 20px;
+                            width: 2px;
+                        }
+                    }
+                }
+                .active{
+                    align-items: center;
+                    display: flex;
+                    height: 20px;
+                    justify-content: center;
+                    align-items: center;
+                    margin-left: auto;
+                    position: relative;
+                    width: 20px;
+                    span{
+                        background: #112969;
+                        height: 2px;
+                        width: 20px;
+                        flex-shrink: 0;
+                        position: absolute;
+                        transition: opacity .2s ease-out;
+    
+                        &:first-child{
+                            opacity: 0;
+                        }
+                    }
+                            }
+                h4{
+                    display: flex;
+                    align-items: center;
+                    gap: 12px;
+                    font-size: 1.7rem;
+                    line-height: 1.1;
+                    text-transform: uppercase;
+                    font-family: Futura;
+                    color: var(--font-color);
+                    color:#112969;
+
+                    svg{
+                        font-size: 60px;
+                    }
+                
+                }
             }
 
-            p{
-                font-size: 20px;
-                margin-bottom: 20px;
+            .accordionContent{
+                font-size: 1.6rem;
                 white-space: pre-wrap;
                 line-height: 1.2;
                 color: inherit; 
                 font-family: Futura Light;
+                max-height: 0;
+                overflow: hidden;
+                color: #112969;
+                transition: max-height .2s ease-out;
             }
+            .openHeight{
+                max-height: fit-content;
+                margin-top: 20px;
+                padding: 10px 20px;
+                margin-left: 50px;
+            }
+
         }
     }
 }

@@ -4,6 +4,7 @@ import {RiWhatsappFill, RiLinkedinFill } from 'react-icons/ri'
 import {FaTelegramPlane} from "react-icons/fa"
 import {TiLocationArrowOutline} from "react-icons/ti"
 import { Button } from '../Button/Button'
+import { AnimateComponent } from '../AnimateComponent/AnimateComponent'
 import "./Footer.scss"
 import "./Responsive.scss"
 export const Footer = () => {
@@ -23,28 +24,29 @@ export const Footer = () => {
         }
     ]
 
-    const handleChatOption = () => {
-      setChatOptions(!chatOptions)
-    }
   return (
-    <div id="footer" className='footer'>
-      <div className='topContent'>
-        <h3>Start a project</h3>
-        <p>Interested in working together? We should queue up a time to chat. I’ll buy the coffee.</p>
-        <a  href="mailto:ayopelumi4@gmail.com?subject=Hello" className="chatBtn">Let's Talk <TiLocationArrowOutline /></a>
-      </div>
-
-      <div>
-        <h2>Live, learn, & level up everyday.<span>- life Motto</span></h2>
-        <h2 className="contact">Contact Me :</h2>
-        <ul className='chatOptionsCtnr'>
-            {chatLinks.map((value, index) => (
-                <li key={`icon${index}`} className='chatOptions'> 
-                    <a href={value.link} target='_blank' >{value.icon}</a>
-                </li>
-            ))}
-        </ul>
-      </div>
-    </div>
+    <AnimateComponent id="footer" className='footer' overflow={true}
+      component={
+        <>
+          <div className='topContent'>
+            <h3>Start a project</h3>
+            <p>Interested in working together? We should queue up a time to chat. I’ll buy the coffee.</p>
+            <a  href="mailto:ayopelumi4@gmail.com?subject=Hello" className="chatBtn">Let's Talk <TiLocationArrowOutline /></a>
+          </div>
+          <div>
+            <h2>Live, learn, & level up everyday.<span>- life Motto</span></h2>
+            <h2 className="contact">Contact Me :</h2>
+            <ul className='chatOptionsCtnr'>
+                {chatLinks.map((value, index) => (
+                    <li key={`icon${index}`} className='chatOptions'> 
+                        <a href={value.link} target='_blank' >{value.icon}</a>
+                    </li>
+                ))}
+            </ul>
+          </div>
+        </>
+      }
+      >
+    </AnimateComponent>
   )
 }

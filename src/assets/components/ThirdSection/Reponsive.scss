@@ -2,15 +2,18 @@
 
 .thirdSection{
     @include xs{
-        min-height: 745px;
-        height: 0;
+        min-height: 806px;
+        height: 806px;
         max-height: 1570px;
-        overflow: hidden;
         flex-direction: column;
         align-items: center;
         padding: 40px 30px;
 
         .cardCtnr{
+            min-height: 703px;
+            height: 0;
+            max-height: 1570px;
+            overflow: hidden;
             .heading{
                 width: 100%;
             }
@@ -31,6 +34,7 @@
             justify-content: end;
             padding: 8px 20px;
             position: absolute;
+            margin-top: 40px;
             bottom: 0;
             left: 0;
             z-index: 20;
@@ -56,9 +60,17 @@
             }
         }
     }
+    .active{
+        color: blue;
+        height: fit-content;
+        padding-bottom: 30px;
+    
+        .cardCtnr{
+            height: 100%;
+        }
+        .responsiveFooter{
+            bottom: 0;
+        }
+    }
 }
-.active{
-    color: blue;
-    height: fit-content;
-    padding-bottom: 30px;
-}
+

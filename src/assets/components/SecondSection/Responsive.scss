@@ -21,11 +21,55 @@
          }
          .list{
             width: 100%;
+
+            li{
+               &:nth-child(3){
+  
+                  .accordionHeader{
+                      .icon{
+                          width: 25px;
+                          height: 25px;
+                      }
+                  }
+               }
+               .accordionHeader{
+
+                  .icon{
+                     font-size: 25px;
+                     margin-right: 10px;
+                  }
+
+                  h4{
+                     font-size: 16px;
+                  }
+                  .iconPlus{
+                     margin-left: 0;
+                     height: 15px;
+                     width: 15px;
+
+                     span{
+                        width: 14px;
+
+                        &:first-child{
+                           height: 15px;
+                        }
+                     }
+                  }
+               }
+
+               .openHeight{
+                  margin-left: 0;
+                  padding: 0;
+                  font-size: 16px;
+                  margin-top: 5px;
+               }
+            }
          }
     }
     @include sm{
       padding-top: 50px;
       padding-bottom: 50px;
+      flex-direction: column;
 
       .serviceHeading{
          h1{
@@ -43,19 +87,12 @@
       .list{
          margin-top: 30px;
          li{
-            width: 45%;
             flex-basis: inherit;
             gap: 0;
-            h4{
-               font-size: 17px;
-               line-height: 0;
-
-               svg{
-                  font-size: 40px;
-               }
+            .accordionHeader{
             }
-            p{
-               font-size: 15px;
+            .accordionContent{
+               margin-left: 0;
             }
          }
       }
