@@ -22,7 +22,7 @@ export const AnimateComponent = (props) => {
         }
     },[isInView])
     return (
-        <div ref={ref} style={{position: "relative", width, overflow:overflow ? undefined :"hidden"}}>
+        <div ref={ref} style={{position: "relative", width}}>
             <motion.section
             variants={{
                 hidden: {opacity:0,y:75},

@@ -13,15 +13,13 @@ export const Header = (props) => {
     const [collapse, setCollapse] = useState(false)
     const [lastScrollPosition, setLastScrollPosition] = useState(0)
     const [showHeader, setShowHeader] = useState(false)
-    const links =["About Me","Skills","Recent Projects","Services"]
+    const links =["About Me","Skills","Recent Projects","What I Do", "Resume"]
     const ref =useRef()
     console.log({collapse},{showHeader})
 
   const handleEvent = () => {
-    console.log("i am here")
+
     animateOnScroll(section2)
-    console.log(window.scrollY)
-    console.log({lastScrollPosition})
     setLastScrollPosition(window.scrollY)
     if (lastScrollPosition < window.scrollY){
       console.log(true)
@@ -33,15 +31,8 @@ export const Header = (props) => {
     }
 
   };
-  const handleClosingEvent = (event) => {
-  console.log("in here")
-  console.log(ref)
-      if(toggleMenu==true && !ref.current.contains(event.target)){
-      console.log(true)
-      setToggleMenu(false)  
-  }
-  }
-  	const handleCloseFilter =() =>{
+
+  	const handleToggleMenu =() =>{
 		setToggleMenu(false)
 	}
 	function useOutsideClick(handleClose, ref) {
@@ -65,7 +56,7 @@ export const Header = (props) => {
 		}, [])
 
     }
-    useOutsideClick(handleCloseFilter, ref);
+    useOutsideClick(handleToggleMenu, ref);
 
    useEffect(()=>{ 
         setSection2(document.querySelector(".firstSection"))
@@ -131,10 +122,10 @@ export const Header = (props) => {
               Ayodeji<br /> Pelumi
       </div>
         <nav ref={ref} className='overlayMenu'>
-        <ul onClick={handleToggle}className= "menuCtnr">
+        <ul className= "menuCtnr">
               {links.map((value, index) => {
                   return <li key={`link ${index}`} className="menuItem">
-                  <a href={`#${value}`}>
+                  <a onClick={handleToggle} href={`#${value}`}>
                   {value}
                   </a>
                   </li>

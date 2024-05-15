@@ -3,7 +3,7 @@ import "./Responsive.scss"
 import { AnimateComponent } from "../AnimateComponent/AnimateComponent"
 export const MyResume = () => {
     return (
-        <AnimateComponent className="resumeCtnr"
+        <AnimateComponent id="Resume"className="resumeCtnr"
             component={
                 <>
                     <h2>Check out my Resume</h2>
