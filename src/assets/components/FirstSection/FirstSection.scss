@@ -1,12 +1,9 @@
 .firstSection{
-    width: 100vw;
-    height: auto;
-    min-height: 700px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 100px 70px;
+
     background: var(--white-bg);
-    position: relative;
+
 
     aside{
         display: flex;
@@ -14,6 +11,7 @@
         gap: 45px;
         position: relative;
         justify-content: center;
+        align-items: center;
 
         .introDiv{
             display: flex;
@@ -39,10 +37,11 @@
                 letter-spacing: -0.1px;
                 font-family: Salks;
                 font-weight: 800;
+                text-align: center;
 
             }
             p{
-                font-size: 16px;
+                font-size: 21px;
                 font-family: Futura;
                 color: var(--heading-color);
                 margin-top: 20px;

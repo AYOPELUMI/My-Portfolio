@@ -200,20 +200,28 @@
         }
     }
 }
-
+.transparentHeader{
+    background: transparent;
+    backdrop-filter: blur(8px);
+    transition: padding 0.25s ease-in, border 0.25s ease-in;
+}
+.miniHeader{
+    padding: 15px 40px;
+    border: none;
+    background: transparent;
+}
 header{
     width: 100%;
     position: fixed;
-    padding: 50px 20px;
-    background:  var(--white-bg);
-    height: 70px;
+    padding: 30px 40px;
     display: flex;
+    background: var(--white-bg);
     align-items: center;
     justify-content: space-between;
     top: 0;
-    opacity: 0;
     z-index: 99;
     border-bottom: 1px solid var(--font-black);
+    transition: background 0.25s ease-in;
 
     .logo{
         font-family: Apple Crush;
@@ -276,13 +284,6 @@ header{
         display: flex;
         gap: 14px;
         align-items: center;
-        padding: 1.5em;
-    }
-    .menuIcon{
-        display: none;
-        color: var(--font-color);
-        font-size: 38px;
-
     }
     .headerBtn{
         background: #7C5DFA;

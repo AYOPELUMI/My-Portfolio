@@ -31,8 +31,13 @@
   animation: slideUp 1s cubic-bezier(.165,.84,.44,1)
 }
 
-.section{
-
+section{
+    width: 100vw;
+    height: auto;
+    min-height: 700px;
+    position: relative;
+    display: flex;
+    padding: 100px 70px;
 }
 @include xs{
     .sticky{
@@ -50,7 +55,7 @@
         padding: 1em 0.5em;
         color: white;
         font-size: 1.4em;
-        z-index: 99;
+        z-index: 13;
         font-weight: 700;
         font-family: Futura Bold;
     }

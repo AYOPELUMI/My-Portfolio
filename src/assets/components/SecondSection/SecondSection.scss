@@ -1,11 +1,5 @@
 .secondSection{
-    width: 100vw;
-    height: auto;
-    min-height: 700px;
     background:var(--whitesmoke-bg);
-    display: flex;
-    padding: 100px 70px;
-    position: relative;
 
     .serviceHeading{
         flex: 1;
@@ -44,6 +38,7 @@
         list-style: none;
         margin-top: 60px;
         padding-left: 1px;
+        transition: height 0.3s ease-in-out;
 
         li{
             height: fit-content;
@@ -54,6 +49,7 @@
             flex-direction: column;
             padding: 22px 40px;
             border-radius: 3rem;
+            transition: height 0.3s ease-in-out;
              &:nth-child(2){
                 background: #c5f0fd;
              }

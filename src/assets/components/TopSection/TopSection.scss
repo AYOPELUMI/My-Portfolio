@@ -1,20 +1,47 @@
 .topSection{
-    width: 100%;
     height: 100vh;
     background-image: url("../../Images/pexels-billelmoula-540518.jpg");
     background-size: cover;
-    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    position: relative;
+    padding: 0;
+
+    @keyframes fadeIn {
+        0% {
+            opacity: 0
+        }
+      
+        to {
+            opacity: 1
+        }
+      }
+      
+      .animate-fadeIn {
+        animation: fadeIn 2s;
+        animation-delay: 2s;
+      }
+      
+      @keyframes slideUp {
+        0% {
+            transform: translateY(100%)
+        }
+      
+        to {
+            transform: translateY(0)
+        }
+      }
+      
+      .animate-slideUpCubiBezier {
+        animation: slideUp 1s cubic-bezier(.165,.84,.44,1) 0.6s;
+      }
 
     .name{
         font-size: 4.5em;
         font-family: salks;
         color: white;
         position: absolute;
-        top:1000px;
+        animation: slideUp 2s cubic-bezier(.165,.84,.44,1);
         // animation: animateDisplay 3s ease-in 0.2s;
 
         // @keyframes animateDisplay{
@@ -45,11 +72,10 @@
         font-family: salks;
         font-size: 1.3em;
         color: white;
-        transform: translateY(-100px);
-        position: absolute;
-        top: -100px;
+        animation: fadeIn 2s;      
         // animation: animateDisplay 3s ease-in 0.2s;
 
+        
         // @keyframes animateDisplay{
         //     0%{
         //         opacity: 0;

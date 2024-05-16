@@ -1,11 +1,6 @@
 .footer{
-    width: 100vw;
     min-height: fit-content;
-    max-height: 100vh;
-    position: relative;
     background:#112240;
-    display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     padding: 80px 45px;
     color: white;
@@ -18,7 +13,7 @@
         width: 90%;
         background: #000;
         color: white;
-        padding: 16px 20px;
+        padding: 35px 20px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -37,7 +32,7 @@
         }
             .chatBtn{
                 width: fit-content;
-                padding: 6px 20px;
+                padding: 10px 20px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -46,6 +41,7 @@
                 border-radius: 24px;
                 font-size: 15px;
                 text-decoration: none;
+                margin-right: 20px;
                 &:hover{
                     opacity: 0.8;
                 }

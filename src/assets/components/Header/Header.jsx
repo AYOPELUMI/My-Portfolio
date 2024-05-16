@@ -13,17 +13,30 @@ export const Header = (props) => {
     const [collapse, setCollapse] = useState(false)
     const [lastScrollPosition, setLastScrollPosition] = useState(0)
     const [showHeader, setShowHeader] = useState(false)
+    const [showMiniHeader, setShowMiniHeader] = useState(false)
     const links =["About Me","Skills","Recent Projects","What I Do", "Resume"]
     const ref =useRef()
     console.log({collapse},{showHeader})
 
   const handleEvent = () => {
+    if (window.scrollY === 0) {
+      setShowMiniHeader(true)
+    }
+    if (window.scrollY >=15) {
+      setShowMiniHeader(false)
+    }
 
-    animateOnScroll(section2)
+    if (window.scrollY >= section2.scrollHeight){
+      setShowHeader(false)
+    }
+    if(window.scrollY < section2.scrollHeight){
+      setShowHeader(true)
+    }
     setLastScrollPosition(window.scrollY)
     if (lastScrollPosition < window.scrollY){
       console.log(true)
       setCollapse(true)
+
     }
     else{
       console.log(false)
@@ -68,31 +81,7 @@ export const Header = (props) => {
           };
     },[section2,collapse,lastScrollPosition])
   // Animate on scroll
-  const animateOnScroll = function (div) {
-      console.log(div.offsetHeight)
-      console.log(div.screenHeight)
-    if (window.scrollY >= div.scrollHeight){
-      setShowHeader(true)
-      anime({
-        targets: ".header",
-        opacity:1,
-        visibility:"visible",
-        duration:100,
 
-      });
-    }
-    else{
-      setShowHeader(false)
-      anime({
-        targets: ".header",
-        opacity:0,
-        visibility:"hidden",
-        duration:100,
-
-      })
-    }
-
-  }
 
     const handleToggle = () =>{
       console.log("i am here")
@@ -110,7 +99,7 @@ export const Header = (props) => {
       document.body.className = ""
     }
     return (
-      <div>
+      <>
       <div id="toggle" onClick={handleToggle} className= {toggleMenu ?"container active" : "container"}>
           <span className="line top"></span>
           <span className="line middle"></span>
@@ -138,8 +127,7 @@ export const Header = (props) => {
       </div>)}
       {
         collapse ? null :
-          showHeader?
-          <header className="header">
+          <header className={showHeader ? showMiniHeader ? "  miniHeader transparentHeader header": " transparentHeader header" : "header"}>
               <div className="logo">
               Ayodeji Pelumi
               </div>
@@ -163,9 +151,9 @@ export const Header = (props) => {
                   <a className='headerBtn' href='#footer'>Hire Me</a>            
               </div>
               
-          </header> : null
+          </header>
     }
-    </div>
+    </>
     )
 }
 

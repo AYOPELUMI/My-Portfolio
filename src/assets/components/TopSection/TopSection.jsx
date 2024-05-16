@@ -17,38 +17,8 @@ import anime from "animejs"
             duration: 1500,
             delay: 200,
             easing: "easeInBack",
-            complete: () => animateLetters()
+            complete:  () => {updateHeight(true)}
         })
-
-    }
-    const animateLetters = () => {
-        if (Number.isInteger(nameCtnrHeight)){
-            anime({
-                targets: '.name',
-                keyframes: [
-    
-                    {top: nameCtnrHeight - 110},
-                    {top: nameCtnrHeight-nameHeight},
-                ],
-                duration:1500,
-                delay:200,
-                easing: "easeInBack",
-            })
-    
-            anime({
-                targets: ".position",
-                keyframes:[
-                    {top: 135},
-                    {top: 103}
-                ],
-                duration: 1500,
-                delay:200,
-                easing: "easeInBack",
-                endDelay:100,
-                complete: () => {updateHeight(true)}
-    
-            })
-        }
 
     }
     useEffect(()=>{
