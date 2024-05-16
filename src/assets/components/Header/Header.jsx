@@ -100,10 +100,10 @@ export const Header = (props) => {
     }
     return (
       <>
-      <div id="toggle" onClick={handleToggle} className= {toggleMenu ?"container active" : "container"}>
-          <span className="line top"></span>
-          <span className="line middle"></span>
-          <span className="line bottom"></span>
+      <div id="toggle"  className= {toggleMenu ?"container active" : "container"}>
+          <span onClick={handleToggle} className="line top"></span>
+          <span onClick={handleToggle} className="line middle"></span>
+          <span onClick={handleToggle} className="line bottom"></span>
       </div>
     {toggleMenu && (
       <div  className={toggleMenu ? "overlay open" : "overlay" }>

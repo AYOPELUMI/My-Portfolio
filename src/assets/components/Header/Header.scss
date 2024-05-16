@@ -55,9 +55,7 @@
     z-index: 100;
     transition: all .3s ease;
 
-    .ctnr{
 
-    }
     .logo{
         font-family: Apple Crush;
         letter-spacing: 1.5px;
@@ -97,6 +95,32 @@
                 min-height: 50px;
                 position: relative;
                 opacity: 0;
+                animation: fadeInTop .5s ease forwards;
+                animation-delay: .35s;
+        
+                &:nth-of-type(2) {
+                    animation-delay: .4s;
+                }
+            
+                &:nth-of-type(3) {
+                    animation-delay: .45s;
+                }
+            
+                &:nth-of-type(4) {
+                    animation-delay: .5s;
+                }
+            
+                &:nth-of-type(5) {
+                    animation-delay: .55s;
+                }
+            
+                &:nth-of-type(6) {
+                    animation-delay: .6s;
+                }
+            
+                &:nth-of-type(7) {
+                    animation-delay: .65s;
+                }
 
                 &:hover{
                     a{
@@ -125,6 +149,18 @@
         }
     }
 }
+@keyframes fadeOutTop {
+    0% {
+        opacity: 1;
+        bottom: 0
+    }
+
+    100% {
+        opacity: 0;
+        bottom: 20%
+    }
+}
+
 @keyframes fadeInTop {
     0% {
         opacity: 0;
@@ -142,6 +178,7 @@
     opacity: 1;
     visibility: visible;
     overflow: hidden;
+    transition: all .3s ease;
 
     .menuItem {
         animation: fadeInTop .5s ease forwards;

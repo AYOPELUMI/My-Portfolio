@@ -7,7 +7,7 @@ export const MyResume = () => {
             component={
                 <>
                     <h2>Check out my Resume</h2>
-                    <a className="resume-button" href="/Resume/resume.pdf" target="_blank" rel="noopener noreferrer">RESUME</a>
+                    <a className="resume-button" href="/Resume/Ogundeji_Ayodeji_Resume.pdf" target="_blank" rel="noopener noreferrer">RESUME</a>
                 </>}
             >
         </AnimateComponent>
