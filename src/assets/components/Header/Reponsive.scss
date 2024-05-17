@@ -34,6 +34,9 @@
     }
 }
 .open{
+    @include xs{
+        display: block;
+    }
     @include sm{
         display: inline-block;
         -webkit-box-pack: center;

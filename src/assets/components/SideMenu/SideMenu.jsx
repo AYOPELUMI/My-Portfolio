@@ -8,7 +8,6 @@ export const SideMenu = (props) => {
         // eslint-disable-next-line no-unused-vars, react/prop-types
         startIconAnim
     } = props
-    console.log({startIconAnim})
     if (startIconAnim == true){
         anime({
             targets: '.target',

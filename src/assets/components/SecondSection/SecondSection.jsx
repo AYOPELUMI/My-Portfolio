@@ -10,14 +10,10 @@ export const SecondSection = () => {
     const [accordionState, setAcordionState] = useState([false,false,false])
     const handleClick = (event) => {
         event.preventDefault()
-        console.log({event})
-        console.log(event.target.dataset.attribute)
+
         let attribute = event.target.dataset.attribute != undefined? event.target.dataset.attribute : event.target.parentNode.dataset.attribute != undefined ? event.target.parentNode.dataset.attribute : event.target.parentNode.parentNode.dataset.attribute != undefined ? event.target.parentNode.parentNode.dataset.attribute : event.target.parentNode.parentNode.parentNode.dataset.attribute;
         let accordionClone = [...accordionState]
-        console.log({attribute})
         let element = [...document.querySelectorAll('.accordion')].findIndex((value) => {return value.dataset.attribute == attribute})
-
-        console.log(element)
         if (accordionState[element] == true){
             accordionClone[element] = false
             setAcordionState(accordionClone)
@@ -26,11 +22,8 @@ export const SecondSection = () => {
             accordionClone[element] = true
             setAcordionState(accordionClone)
         }
-        
-
-      console.log(event.target)
     }
-    console.log(accordionState)
+
     
 
     return (

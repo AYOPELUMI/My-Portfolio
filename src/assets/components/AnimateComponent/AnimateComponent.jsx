@@ -17,7 +17,6 @@ export const AnimateComponent = (props) => {
 
     useEffect(()=>{
         if(isInView){
-            console.log({isInView})
             controlAnimation.start("visible")
         }
     },[isInView])

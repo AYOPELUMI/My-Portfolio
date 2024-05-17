@@ -173,6 +173,7 @@
     }
 }
 .open {
+    display: none;
     height: 100%;
     z-index: 100;
     opacity: 1;
@@ -240,12 +241,13 @@
 .transparentHeader{
     background: transparent;
     backdrop-filter: blur(8px);
-    transition: padding 0.25s ease-in, border 0.25s ease-in;
+    transition: all 0.25s ease;
 }
 .miniHeader{
     padding: 15px 40px;
     border: none;
     background: transparent;
+    transition: all 0.25s ease;
 }
 header{
     width: 100%;
@@ -340,4 +342,8 @@ header{
         font-size: 24px;
         margin-top: 6px;
     }
+}
+.noHeader{
+    top: -100%;
+    transition: all 0.25s ease;
 }

@@ -17,7 +17,6 @@ export const ThirdSection = () => {
     const handleToggle =() => {
          setShowMore(!showMore)
     }
-    console.log({showMore})
   return (
     <AnimateComponent id="Recent Projects"className={showMore? 'thirdSection activeAccordion' :'thirdSection' }
        component={

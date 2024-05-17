@@ -8,7 +8,6 @@ import anime from "animejs"
         nameCtnrHeight,
         nameHeight
     }= Props
-    console.log(nameCtnrHeight)
 
     const animate = () =>{
         anime({

@@ -22,10 +22,9 @@ function App() {
   const [toggle, setToggle] = useState(false)
   const [nameCtnrHeight, setNameCtnrHeight] = useState("ab")
   const [nameHeight, setNameHeight] = useState("")
-  console.log({nameCtnrHeight})
+
 
   function updateHeight(args){
-    console.log({args})
       setHeight(true)
   }
 
@@ -37,15 +36,13 @@ function App() {
     setNameHeight(document.querySelector(".name").offsetHeight)
     const handleResize = () => {
       // Perform actions on window resize
-      console.log("i am here")
       setNameCtnrHeight(document.querySelector(".nameCtnr").clientHeight)
-      console.log(document.querySelector(".nameCtnr").clientHeight)
       setNameHeight(document.querySelector(".name").offsetHeight)
     };
 
 
-    window.addEventListener('resize',()=>{console.log("in the resize"); handleResize()});
-    window.addEventListener("load",()=>{console.log("in the load"); handleResize()});
+    window.addEventListener('resize',handleResize);
+    window.addEventListener("load",handleResize);
     return () => {
       window.removeEventListener('resize', handleResize);
       window.removeEventListener('load',handleResize)
