@@ -33,7 +33,7 @@ import anime from "animejs"
             </div>
             <hr className='hrLine'/>
             <div className='positionCtnr'>
-                <p className="position">FRONT END DEVELOPER</p>
+                <p className="position">DEVELOPER</p>
             </div>
         </section>
     )

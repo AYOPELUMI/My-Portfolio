@@ -65,7 +65,7 @@ const controlAnimation = useAnimation();
                             </motion.span>
                             <motion.p 
                                 variants={children}>
-                                a <span className="specialChar">front end developer</span>, creating good <span className="specialChar">UI/UX experience</span>, versatile codes, with loads of skills and quality attached within. Seeking opportunity to showcase skills. My interest in web development started in 2021 when I was amazed by the single page which i playfully created a single page form which taught me about HTML & CSS! Ever since I have experience developing and designing applications for the web, from landing pages to progressive web applications(PWA).
+                                a <span className="specialChar"> developer</span>, creating good <span className="specialChar">UI/UX experience</span>, versatile codes, with loads of skills and quality attached within. Seeking opportunity to showcase skills. My interest in web development started in 2021 when I was amazed by the single page which i playfully created a single page form which taught me about HTML & CSS! Ever since I have experience developing and designing applications for the web & mobile, from landing pages to progressive web applications(PWA) & mobile applications(android).
                             </motion.p> 
                             <motion.p 
                                 variants={children}>
